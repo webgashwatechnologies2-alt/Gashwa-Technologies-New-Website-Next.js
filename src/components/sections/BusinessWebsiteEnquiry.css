@@ -1,0 +1,558 @@
+/* ==========================================================================
+   Business Website Enquiry Section
+   Matches pixel-perfect modern card layout & enquiry form from reference
+   ========================================================================== */
+
+.bwe-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: 60px 0 50px 0;
+  overflow: hidden;
+  font-family: var(--font-sans, "Plus Jakarta Sans", "Plus Jakarta Sans Fallback");
+}
+
+/* Subtle dot mesh background */
+.bwe-ambient-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(#cbd5e1 1.1px, transparent 1.1px);
+  background-size: 26px 26px;
+  opacity: 0.45;
+  z-index: 0;
+}
+
+/* Soft ambient glows */
+.bwe-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.bwe-glow-left {
+  top: 10%;
+  left: -5%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+}
+
+.bwe-glow-right {
+  top: 20%;
+  right: -5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.06) 0%, transparent 70%);
+}
+
+.bwe-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Two-column responsive layout */
+.bwe-grid {
+  display: grid;
+  grid-template-columns: 1.16fr 0.84fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: Visual & Text
+   ========================================================================== */
+.bwe-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image Card */
+.bwe-image-card {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(15, 23, 42, 0.04);
+  background: #f1f5f9;
+}
+
+.bwe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bwe-image-card:hover .bwe-image {
+  transform: scale(1.03);
+}
+
+.bwe-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.02) 0%,
+    rgba(15, 23, 42, 0.25) 50%,
+    rgba(15, 23, 42, 0.68) 100%
+  );
+  pointer-events: none;
+}
+
+/* Bottom-left Floating Badge on Image */
+.bwe-image-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  max-width: calc(100% - 48px);
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 14px 22px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.bwe-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.bwe-code-icon {
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 13px;
+  color: white;
+}
+
+.bwe-badge-title {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Left Bottom Content */
+.bwe-content {
+  margin-top: 32px;
+}
+
+.bwe-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #2B5F9B !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.bwe-eyebrow-icon {
+  font-size: 14px;
+  color: #2B5F9B !important;
+  line-height: 1;
+}
+
+.bwe-title {
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+
+.bwe-title-accent {
+  color: #2B5F9B !important;
+  font-weight: 800;
+}
+
+.bwe-description {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0;
+}
+
+.bwe-desc-accent {
+  color: #2B5F9B !important;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: Modern Enquiry Form Card
+   ========================================================================== */
+.bwe-right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bwe-form-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 34px 38px 30px 38px;
+  box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.02);
+  transition: box-shadow 0.3s ease;
+}
+
+.bwe-form-card:hover {
+  box-shadow: 0 24px 50px -10px rgba(15, 23, 42, 0.12), 0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+/* Top Right Decorative Ring & Dot */
+.bwe-decorative-ring {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 32px;
+  height: 32px;
+  border: 1px dashed #fecdd3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.bwe-ring-dot {
+  width: 10px;
+  height: 10px;
+  background: #2B5F9B;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, 0.18);
+  animation: bwePulse 2.4s infinite;
+}
+
+@keyframes bwePulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 6px rgba(225, 29, 72, 0.1);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2);
+  }
+}
+
+/* Form Header */
+.bwe-form-header {
+  margin-bottom: 22px;
+}
+
+.bwe-form-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #2B5F9B !important;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.bwe-form-eyebrow i {
+  font-size: 12px;
+  color: #2B5F9B !important;
+}
+
+.bwe-form-title {
+  color: #0b1a3d;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* Form Fields */
+.bwe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bwe-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bwe-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin: 0;
+}
+
+.bwe-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bwe-input-icon {
+  position: absolute;
+  left: 16px;
+  color: #2B5F9B !important;
+  font-size: 15px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: color 0.2s ease;
+}
+
+.bwe-input {
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0 16px 0 44px;
+  font-size: 14px;
+  color: #0f172a;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.bwe-input::placeholder {
+  color: #94a3b8;
+  font-size: 13.5px;
+}
+
+.bwe-input:focus {
+  border-color: #2B5F9B;
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.12);
+}
+
+/* Select Field */
+.bwe-select-wrapper {
+  cursor: pointer;
+}
+
+.bwe-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.bwe-select-arrow {
+  position: absolute;
+  right: 16px;
+  color: #64748b;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* Textarea Field */
+.bwe-textarea-wrapper {
+  align-items: flex-start;
+}
+
+.bwe-textarea-icon {
+  top: 15px;
+}
+
+.bwe-textarea {
+  height: auto;
+  min-height: 95px;
+  padding: 13px 16px 13px 44px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+/* Submit Button */
+.bwe-submit-btn {
+  margin-top: 6px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(135deg, #2B5F9B 0%, #2B5F9B 100%) !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 12px;
+  font-size: 15.5px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bwe-submit-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #2B5F9B 0%, #2B5F9B 100%) !important;
+}
+
+.bwe-submit-btn:active {
+  transform: translateY(0);
+}
+
+.bwe-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.bwe-btn-arrow {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.bwe-submit-btn:hover .bwe-btn-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Form Trust Badges Footer */
+.bwe-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 4px;
+}
+
+.bwe-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.bwe-trust-item i {
+  color: #2B5F9B !important;
+  font-size: 12.5px;
+}
+
+/* Submission Success Box */
+.bwe-success-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.bwe-success-icon {
+  font-size: 40px;
+  color: #16a34a;
+  margin-bottom: 12px;
+}
+
+.bwe-success-box h4 {
+  color: #14532d;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bwe-success-box p {
+  color: #15803d;
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1080px) {
+  .bwe-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .bwe-right-col {
+    max-width: 580px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .bwe-image-card {
+    height: 340px;
+  }
+
+  .bwe-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bwe-section {
+    padding: 40px 0 35px 0;
+  }
+
+  .bwe-image-card {
+    height: 260px;
+    border-radius: 18px;
+  }
+
+  .bwe-image-badge {
+    bottom: 16px;
+    left: 16px;
+    padding: 10px 14px;
+    max-width: calc(100% - 32px);
+  }
+
+  .bwe-badge-title {
+    font-size: 14.5px;
+  }
+
+  .bwe-title {
+    font-size: 23px;
+  }
+
+  .bwe-form-card {
+    padding: 26px 20px 22px 20px;
+    border-radius: 18px;
+  }
+
+  .bwe-form-title {
+    font-size: 22px;
+  }
+
+  .bwe-form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

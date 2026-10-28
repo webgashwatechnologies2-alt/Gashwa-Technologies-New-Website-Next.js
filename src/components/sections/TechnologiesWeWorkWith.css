@@ -1,0 +1,49 @@
+.tech-section {
+  padding: 64px 0;
+}
+
+.tech-section .tech-inner {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tech-section .tech-inner h2 {
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+}
+
+.tech-section .lead {
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+.tech-section .tech-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech-section .tech-item {
+  width: 92px;
+  height: 92px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.08);
+  color: #10233f;
+}
+
+.tech-section .tech-item i {
+  font-size: 28px;
+}
+
+@media (max-width: 767px) {
+  .tech-section .tech-item {
+    width: 72px;
+    height: 72px;
+  }
+}

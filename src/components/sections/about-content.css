@@ -1,0 +1,278 @@
+/* =========================================================
+   About / Long-form content section
+========================================================= */
+
+.ga-about {
+  --ga-primary: #2b5f9b;
+  --ga-primary-dark: #1d4576;
+  --ga-primary-deep: #142f52;
+  --ga-primary-tint: #eaf1f9;
+  --ga-accent: #dd9a3b;
+  --ga-ink: #101a2b;
+  --ga-muted: #5b6b82;
+  --ga-line: #dbe4f0;
+  --ga-paper: #f5f8fc;
+
+  padding: 50px 0;
+  background: var(--ga-paper);
+  font-family: "Plus Jakarta Sans", "Plus Jakarta Sans Fallback";
+  
+}
+
+.ga-about__container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Heading --- */
+
+.ga-about__head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ga-about__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--ga-primary-dark);
+  background: var(--ga-primary-tint);
+  border: 1px solid var(--ga-line);
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+
+.ga-about__head h2 {
+  margin: 18px 0 0;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ga-ink);
+}
+
+.ga-about__head h2 span {
+  display: block;
+  color: var(--ga-primary);
+}
+
+/* --- Body copy --- */
+
+.ga-about__body {
+  position: relative;
+  max-height: 340px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.ga-about__body.is-expanded {
+  max-height: 2400px;
+}
+
+.ga-about__body p {
+  margin: 0 0 18px;
+  color: var(--ga-muted);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.ga-about__body p:last-child {
+  margin-bottom: 0;
+}
+
+.ga-about__lead {
+  color: var(--ga-ink) !important;
+  font-size: 1.08rem !important;
+  font-weight: 500;
+}
+
+.ga-about__body a {
+  color: var(--ga-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(43, 95, 155, 0.35);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.ga-about__body a:hover {
+  text-decoration-color: var(--ga-primary);
+}
+
+.ga-about__fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 110px;
+  background: linear-gradient(to bottom, transparent, var(--ga-paper));
+  pointer-events: none;
+}
+
+/* --- Read more toggle --- */
+
+.ga-about__toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px auto 44px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--ga-line);
+  background: #fff;
+  color: var(--ga-primary-dark);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.ga-about__toggle:hover {
+  border-color: var(--ga-primary);
+  background: var(--ga-primary-tint);
+}
+
+.ga-about__toggle i {
+  font-size: 0.72rem;
+  transition: transform 0.3s ease;
+}
+
+.ga-about__toggle i.is-flipped {
+  transform: rotate(180deg);
+}
+
+/* --- Coverage line --- */
+
+.ga-about__coverage {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid var(--ga-line);
+  border-left: 3px solid var(--ga-primary);
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 28px;
+}
+
+.ga-about__coverage-icon {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--ga-primary-tint);
+  color: var(--ga-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+}
+
+.ga-about__coverage p {
+  margin: 0;
+  color: var(--ga-muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.ga-about__coverage strong {
+  color: var(--ga-ink);
+}
+
+/* --- CTA banner --- */
+
+.ga-about__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 26px 30px;
+  border-radius: 16px;
+  background: var(--ga-primary-deep);
+  color: #fff;
+}
+
+.ga-about__cta-text strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.ga-about__cta-text span {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ga-about__cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.ga-about__cta-btn:hover {
+  background: var(--ga-accent);
+  border-color: var(--ga-accent);
+  transform: translateY(-2px);
+}
+
+.ga-about__cta-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.ga-about__cta-btn small {
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.ga-about__cta-btn strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 640px) {
+  .ga-about {
+    padding: 70px 0;
+  }
+
+  .ga-about__coverage {
+    flex-direction: column;
+  }
+
+  .ga-about__cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ga-about__cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

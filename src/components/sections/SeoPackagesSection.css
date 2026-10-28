@@ -1,0 +1,965 @@
+/* ==========================================================================
+   SEO Packages Section — Modern High-End Deliverables & Comparison
+   Brand Color Theme: #2B5F9B
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.seo-pkg-section {
+  position: relative;
+  background: #fbfcfd;
+  padding: 20px 0 90px;
+  overflow: hidden;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
+}
+
+/* Background Ambient Lighting */
+.seo-pkg-ambient {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.seo-pkg-ambient--1 {
+  top: -120px;
+  left: -80px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(43, 95, 155, 0.08) 0%, transparent 70%);
+}
+
+.seo-pkg-ambient--2 {
+  bottom: 10%;
+  right: -100px;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(43, 95, 155, 0.07) 0%, transparent 70%);
+}
+
+.seo-pkg-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(43, 95, 155, 0.08) 1.2px, transparent 1.2px);
+  background-size: 32px 32px;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+.seo-pkg-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Section Header
+   -------------------------------------------------------------------------- */
+.seo-pkg-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 56px;
+}
+
+.seo-pkg-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(43, 95, 155, 0.08);
+  border: 1px solid rgba(43, 95, 155, 0.2);
+  border-radius: 9999px;
+  padding: 6px 18px 6px 12px;
+  color: #2B5F9B;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.seo-pkg-dot {
+  width: 8px;
+  height: 8px;
+  background: #2B5F9B;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(43, 95, 155, 0.2);
+  animation: seoDotPulse 2.2s infinite;
+}
+
+@keyframes seoDotPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 3px rgba(43, 95, 155, 0.2); }
+  50% { transform: scale(1.15); box-shadow: 0 0 0 6px rgba(43, 95, 155, 0); }
+}
+
+.seo-pkg-title {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px;
+}
+
+.seo-pkg-highlight {
+  color: #2B5F9B;
+  position: relative;
+  display: inline-block;
+}
+
+.seo-pkg-subtitle {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.68;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Pricing Cards (3 Column Grid)
+   -------------------------------------------------------------------------- */
+.seo-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+  margin-bottom: 64px;
+}
+
+.seo-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1.5px solid #e2e8f0;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px -8px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.seo-card:hover {
+  transform: translateY(-6px);
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 45px -10px rgba(43, 95, 155, 0.12);
+}
+
+/* Popular Card (Mid-Size Business) */
+.seo-card--popular {
+  border-color: #2B5F9B;
+  box-shadow: 0 18px 45px -10px rgba(43, 95, 155, 0.22), 0 0 0 1px #2B5F9B;
+  transform: scale(1.02);
+  z-index: 2;
+}
+
+.seo-card--popular:hover {
+  transform: scale(1.02) translateY(-6px);
+  box-shadow: 0 24px 55px -10px rgba(43, 95, 155, 0.28), 0 0 0 1px #2B5F9B;
+}
+
+/* Floating Popular Badge */
+.seo-card-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #2B5F9B 0%, #1e4575 100%);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(43, 95, 155, 0.35);
+  white-space: nowrap;
+}
+
+.seo-card-tier-label {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.seo-card-header {
+  margin-bottom: 18px;
+}
+
+.seo-card-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 4px;
+}
+
+.seo-card-sub {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #2B5F9B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Price Box */
+.seo-card-price-box {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #edf2f7;
+}
+
+.seo-card--popular .seo-card-price-box {
+  background: rgba(43, 95, 155, 0.05);
+  border-color: rgba(43, 95, 155, 0.15);
+}
+
+.seo-card-price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.seo-card-price {
+  font-size: 34px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.seo-card--popular .seo-card-price {
+  color: #2B5F9B;
+}
+
+.seo-card-period {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.seo-card-tax-note {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.seo-card-desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  min-height: 44px;
+}
+
+/* Key Features list */
+.seo-card-features {
+  flex: 1;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+  margin-bottom: 28px;
+}
+
+.seo-card-feat-title {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.seo-card-feat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.seo-card-feat-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.seo-feat-check {
+  font-size: 12px;
+  color: #059669;
+  background: rgba(16, 185, 129, 0.12);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CTA Button */
+.seo-card-action {
+  margin-top: auto;
+}
+
+.seo-card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  background: #ffffff;
+  color: #2B5F9B;
+  border: 2px solid #2B5F9B;
+  border-radius: 9999px;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.seo-card-btn:hover {
+  background: #2B5F9B;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43, 95, 155, 0.25);
+}
+
+.seo-card-btn i {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.seo-card-btn:hover i {
+  transform: translateX(3px);
+}
+
+/* Popular Button */
+.seo-card-btn--popular {
+  background: #2B5F9B;
+  color: #ffffff !important;
+  border-color: #2B5F9B;
+  box-shadow: 0 8px 24px -2px rgba(43, 95, 155, 0.4);
+}
+
+.seo-card-btn--popular:hover {
+  background: #204977;
+  border-color: #204977;
+  box-shadow: 0 12px 28px -2px rgba(43, 95, 155, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Selector Tabs
+   -------------------------------------------------------------------------- */
+.seo-mobile-tabs {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding: 4px;
+}
+
+.seo-tab-btn {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.seo-tab-btn.active {
+  background: #2B5F9B;
+  color: #ffffff;
+  border-color: #2B5F9B;
+  box-shadow: 0 4px 12px rgba(43, 95, 155, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Detailed Feature Comparison Matrix
+   -------------------------------------------------------------------------- */
+.seo-matrix-wrap {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.seo-matrix-header-info {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 32px;
+}
+
+.seo-matrix-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #2B5F9B;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.seo-matrix-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+
+.seo-matrix-sub {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Comparison Table Card */
+.seo-matrix-table-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.05);
+  overflow: hidden;
+}
+
+/* Sticky Header */
+.seo-table-head {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.4fr) repeat(3, 1fr);
+  background: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+  position: sticky;
+  top: 70px;
+  z-index: 10;
+}
+
+.seo-th {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.seo-th--feature {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.seo-th--plan {
+  text-align: center;
+  align-items: center;
+  border-left: 1px solid #eef2f7;
+}
+
+.seo-th--popular {
+  background: rgba(43, 95, 155, 0.06);
+  position: relative;
+}
+
+.seo-th-popular-pill {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #2B5F9B;
+  color: #ffffff;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  margin-bottom: 4px;
+}
+
+.seo-th-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.seo-th-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2B5F9B;
+  margin-top: 2px;
+}
+
+.seo-th-price span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* Category Groups */
+.seo-cat-group {
+  border-bottom: 1px solid #edf2f7;
+}
+
+.seo-cat-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 24px;
+  background: linear-gradient(90deg, #f1f5f9 0%, #f8fafc 100%);
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.seo-cat-row:hover {
+  background: #e9eef5;
+}
+
+.seo-cat-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e3a5f;
+  letter-spacing: -0.01em;
+}
+
+.seo-cat-icon {
+  color: #2B5F9B;
+  font-size: 14px;
+}
+
+.seo-cat-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.seo-cat-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  background: #ffffff;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  border: 1px solid #e2e8f0;
+}
+
+.seo-cat-toggle-icon {
+  font-size: 11px;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+/* Feature Rows */
+.seo-cat-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.seo-row {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.4fr) repeat(3, 1fr);
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.15s ease;
+}
+
+.seo-row:hover {
+  background: #f8fafc;
+}
+
+.seo-row--alt {
+  background: #fcfdfe;
+}
+
+.seo-td {
+  padding: 14px 24px;
+}
+
+.seo-td--feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.seo-item-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+  flex-shrink: 0;
+}
+
+.seo-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.seo-td--val {
+  text-align: center;
+  border-left: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seo-td--popular {
+  background: rgba(43, 95, 155, 0.03);
+}
+
+.seo-mobile-plan-tag {
+  display: none;
+}
+
+/* Value Badges */
+.seo-check-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.seo-check-badge--popular {
+  background: rgba(16, 185, 129, 0.14);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+.seo-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #eef4fc;
+  color: #2B5F9B;
+  border: 1px solid rgba(43, 95, 155, 0.2);
+  padding: 4px 13px;
+  border-radius: 9999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.seo-pill-badge--popular {
+  background: #2B5F9B;
+  color: #ffffff;
+  border-color: #2B5F9B;
+  box-shadow: 0 2px 8px rgba(43, 95, 155, 0.2);
+}
+
+/* Table Footer Actions */
+.seo-table-footer {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.4fr) repeat(3, 1fr);
+  align-items: center;
+  background: #f8fafc;
+  padding: 18px 24px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.seo-tf--label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.seo-tf {
+  display: flex;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+.seo-tf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  background: #ffffff;
+  color: #2B5F9B;
+  border: 1.5px solid #2B5F9B;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.seo-tf-btn:hover {
+  background: #2B5F9B;
+  color: #ffffff !important;
+}
+
+.seo-tf-btn--popular {
+  background: #2B5F9B;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(43, 95, 155, 0.3);
+}
+
+.seo-tf-btn--popular:hover {
+  background: #204977;
+}
+
+/* --------------------------------------------------------------------------
+   Bottom Consultation Banner
+   -------------------------------------------------------------------------- */
+.seo-pkg-cta-banner {
+  background: linear-gradient(135deg, #1b3d68 0%, #2B5F9B 60%, #1e4474 100%);
+  border-radius: 24px;
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  box-shadow: 0 20px 50px -10px rgba(43, 95, 155, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.seo-pkg-cta-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.08), transparent);
+  pointer-events: none;
+}
+
+.seo-cta-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.seo-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.seo-cta-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.015em;
+  margin: 0 0 10px;
+}
+
+.seo-cta-desc {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 600px;
+}
+
+.seo-cta-desc strong {
+  color: #ffffff;
+}
+
+.seo-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.seo-cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #2B5F9B !important;
+  font-size: 14.5px;
+  font-weight: 800;
+  padding: 13px 26px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.seo-cta-btn-primary:hover {
+  background: #f0f5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.seo-cta-btn-primary i {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.seo-cta-btn-primary:hover i {
+  transform: translateX(3px);
+}
+
+.seo-cta-btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+  font-size: 14.5px;
+  font-weight: 700;
+  padding: 12.5px 22px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.seo-cta-btn-call:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Design
+   -------------------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .seo-cards-grid {
+    gap: 18px;
+  }
+
+  .seo-card {
+    padding: 28px 22px;
+  }
+
+  .seo-card-price {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .seo-pkg-section {
+    padding: 70px 0 60px;
+  }
+
+  .seo-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto 40px;
+  }
+
+  .seo-card--popular {
+    transform: none;
+  }
+
+  .seo-card--popular:hover {
+    transform: translateY(-5px);
+  }
+
+  .seo-mobile-tabs {
+    display: flex;
+  }
+
+  /* When single plan selected on mobile/tablet */
+  .seo-table-head {
+    grid-template-columns: 1fr 1fr;
+    top: 60px;
+  }
+
+  .seo-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seo-table-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seo-pkg-cta-banner {
+    flex-direction: column;
+    padding: 30px 24px;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .seo-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .seo-cta-btn-primary,
+  .seo-cta-btn-call {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .seo-pkg-container {
+    padding: 0 16px;
+  }
+
+  .seo-th,
+  .seo-td {
+    padding: 12px 14px;
+  }
+
+  .seo-item-name {
+    font-size: 13px;
+  }
+
+  .seo-pill-badge,
+  .seo-check-badge {
+    font-size: 11.5px;
+    padding: 3px 9px;
+  }
+
+  .seo-cat-row {
+    padding: 12px 16px;
+  }
+
+  .seo-cat-title {
+    font-size: 13.5px;
+  }
+}

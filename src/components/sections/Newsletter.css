@@ -1,0 +1,6 @@
+.cta-thumb-image {
+  border-radius: 20px;
+  height: 220px;
+  width: auto;
+  object-fit: cover;
+}

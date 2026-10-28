@@ -1,0 +1,411 @@
+/* ==========================================================================
+   FAQ Section — Modern 2-Column Split Design
+   Theme Accent: #2B5F9B
+   Matches Image 2 Layout: Left CTA Consultant Card + Right Minimalist Accordion
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+.faq2-section {
+  position: relative;
+  background: #fbfbfd;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(43, 95, 155, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(43, 95, 155, 0.04) 0%, transparent 45%);
+  padding: 100px 0 95px;
+  overflow: hidden;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
+}
+
+/* Subtle background glow blobs */
+.faq2-ambient-glow {
+  position: absolute;
+  top: -80px;
+  left: 5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(43, 95, 155, 0.07) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.faq2-ambient-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(43, 95, 155, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+/* Container */
+.faq2-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Main 2-column Grid */
+.faq2-layout {
+  display: grid;
+  grid-template-columns: 390px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Header & Book a Call Card
+   -------------------------------------------------------------------------- */
+.faq2-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq2-header-block {
+  margin-bottom: 28px;
+}
+
+/* Eyebrow: Dot + FAQs */
+.faq2-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.faq2-eyebrow-dot {
+  width: 8.5px;
+  height: 8.5px;
+  background-color: #2B5F9B;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(43, 95, 155, 0.18);
+  animation: faq2Pulse 2.4s infinite ease-in-out;
+}
+
+@keyframes faq2Pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 3px rgba(43, 95, 155, 0.2);
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 6px rgba(43, 95, 155, 0);
+  }
+}
+
+/* Title */
+.faq2-title {
+  font-size: clamp(34px, 3.6vw, 46px);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.faq2-subtitle {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 14px 0 0;
+  max-width: 360px;
+}
+
+/* Book a Call Card */
+.faq2-call-card {
+  background: #ffffff;
+  border-radius: 26px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 
+    0 16px 40px -12px rgba(43, 95, 155, 0.08),
+    0 2px 10px rgba(0, 0, 0, 0.02);
+  padding: 34px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq2-call-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 22px 50px -12px rgba(43, 95, 155, 0.13),
+    0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+/* Subtle corner highlight */
+.faq2-call-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2B5F9B 0%, rgba(43, 95, 155, 0.3) 100%);
+  opacity: 0.9;
+}
+
+/* Avatar with ambient halo glow */
+.faq2-avatar-wrap {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 22px;
+}
+
+.faq2-avatar-img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 16px rgba(43, 95, 155, 0.16);
+  display: block;
+}
+
+.faq2-avatar-halo {
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(43, 95, 155, 0.32) 0%, rgba(43, 95, 155, 0) 70%);
+  filter: blur(10px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Call Card Texts */
+.faq2-call-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.faq2-call-desc {
+  font-size: 14.5px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+/* Primary CTA Button (#2B5F9B) */
+.faq2-call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #2B5F9B;
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 13.5px 24px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 8px 22px -3px rgba(43, 95, 155, 0.38);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+}
+
+.faq2-call-btn:hover {
+  background: #204a7a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -3px rgba(43, 95, 155, 0.48);
+  color: #ffffff !important;
+}
+
+.faq2-call-btn:active {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Minimalist Accordion List
+   -------------------------------------------------------------------------- */
+.faq2-right {
+  width: 100%;
+}
+
+.faq2-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq2-item {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #edf1f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.faq2-item:hover {
+  border-color: #d4e2f2;
+  box-shadow: 0 6px 20px rgba(43, 95, 155, 0.05);
+}
+
+.faq2-item--open {
+  border-color: rgba(43, 95, 155, 0.25);
+  box-shadow: 0 8px 24px rgba(43, 95, 155, 0.07);
+}
+
+/* Question Button */
+.faq2-question-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 26px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.2s ease;
+}
+
+.faq2-question-btn:hover {
+  background: rgba(43, 95, 155, 0.015);
+}
+
+.faq2-q-text {
+  flex: 1;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.faq2-item--open .faq2-q-text {
+  color: #0f172a;
+}
+
+/* Icon on the right (+ / ×) */
+.faq2-q-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.faq2-q-icon--open {
+  color: #0f172a;
+  transform: rotate(90deg);
+}
+
+/* Answer Body */
+.faq2-answer-wrap {
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq2-answer-content {
+  padding: 0 26px 24px 26px;
+}
+
+.faq2-answer-content p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Design
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .faq2-layout {
+    grid-template-columns: 340px 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .faq2-section {
+    padding: 70px 0 65px;
+  }
+
+  .faq2-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .faq2-left {
+    max-width: 100%;
+  }
+
+  .faq2-call-card {
+    max-width: 480px;
+    margin: 20px 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .faq2-section {
+    padding: 55px 0 50px;
+  }
+
+  .faq2-container {
+    padding: 0 18px;
+  }
+
+  .faq2-question-btn {
+    padding: 18px 20px;
+    gap: 14px;
+  }
+
+  .faq2-q-text {
+    font-size: 15px;
+  }
+
+  .faq2-answer-content {
+    padding: 0 20px 20px 20px;
+  }
+
+  .faq2-answer-content p {
+    font-size: 14px;
+  }
+
+  .faq2-call-card {
+    padding: 26px 20px;
+    border-radius: 20px;
+  }
+
+  .faq2-call-title {
+    font-size: 20px;
+  }
+
+  .faq2-avatar-wrap {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 16px;
+  }
+
+  .faq2-avatar-img {
+    width: 68px;
+    height: 68px;
+  }
+}

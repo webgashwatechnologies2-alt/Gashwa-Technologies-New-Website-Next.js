@@ -1,0 +1,285 @@
+/* ════════════════════════════════════════════════════════
+   VISION & MISSION SECTION — Modern Professional Design
+   ════════════════════════════════════════════════════════ */
+
+/* ─── Section Wrapper ──────────────────────────────────── */
+.vms-section {
+  position: relative;
+  background: linear-gradient(170deg, #080f24 0%, #0d1b3e 45%, #091530 100%);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* ─── Background grid pattern ──────────────────────────── */
+.vms-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+/* ─── Ambient glow orbs ────────────────────────────────── */
+.vms-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+.vms-glow--1 {
+  width: 560px; height: 560px;
+  background: radial-gradient(circle, rgba(50, 100, 159, 0.22) 0%, transparent 70%);
+  top: -120px; right: -80px;
+}
+.vms-glow--2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(99, 179, 237, 0.12) 0%, transparent 70%);
+  bottom: -60px; left: -60px;
+}
+
+.vms-container { position: relative; z-index: 1; }
+
+/* ─── Section Header ────────────────────────────────────── */
+.vms-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 64px;
+}
+
+.vms-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #63b3ed;
+  margin-bottom: 20px;
+}
+.vms-eyebrow__dot {
+  display: inline-block;
+  width: 20px; height: 1px;
+  background: linear-gradient(90deg, transparent, #63b3ed);
+}
+.vms-eyebrow__dot:last-child {
+  background: linear-gradient(90deg, #63b3ed, transparent);
+}
+
+.vms-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0 0 20px;
+  letter-spacing: -0.5px;
+}
+.vms-title__accent {
+  background: linear-gradient(135deg, #63b3ed 0%, #4299e1 50%, #32649F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.vms-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+/* ─── Mission Banner ────────────────────────────────────── */
+.vms-mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 48px;
+  backdrop-filter: blur(12px);
+}
+
+.vms-mission__left {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vms-mission__icon-wrap {
+  flex-shrink: 0;
+  width: 54px; height: 54px;
+  background: linear-gradient(135deg, rgba(99, 179, 237, 0.2) 0%, rgba(50, 100, 159, 0.25) 100%);
+  border: 1px solid rgba(99, 179, 237, 0.3);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #63b3ed;
+  margin-top: 4px;
+}
+
+.vms-mission__heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 14px;
+}
+.vms-mission__text {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.vms-mission__right {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.vms-mission__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.vms-mission__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.7);
+}
+.vms-mission__list li i {
+  flex-shrink: 0;
+  font-size: 16px;
+  color: #63b3ed;
+  margin-top: 2px;
+}
+
+/* ─── Values Grid ───────────────────────────────────────── */
+.vms-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ─── Value Card ────────────────────────────────────────── */
+.vms-value-card {
+  position: relative;
+  padding: 32px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+.vms-value-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(99, 179, 237, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+/* Top accent line on hover */
+.vms-value-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #32649F 0%, #63b3ed 50%, #32649F 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.vms-value-card:hover::before { opacity: 1; }
+
+.vms-value-card__icon {
+  width: 50px; height: 50px;
+  background: linear-gradient(135deg, rgba(99, 179, 237, 0.15) 0%, rgba(50, 100, 159, 0.2) 100%);
+  border: 1px solid rgba(99, 179, 237, 0.25);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #63b3ed;
+  margin-bottom: 20px;
+  transition: all 0.35s ease;
+}
+.vms-value-card:hover .vms-value-card__icon {
+  background: linear-gradient(135deg, rgba(99, 179, 237, 0.3) 0%, rgba(50, 100, 159, 0.4) 100%);
+  border-color: rgba(99, 179, 237, 0.5);
+  box-shadow: 0 8px 24px rgba(50, 100, 159, 0.4);
+  transform: scale(1.08);
+}
+
+.vms-value-card__title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.vms-value-card__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.58);
+  margin: 0;
+}
+
+/* Glowing bg blob on hover */
+.vms-value-card__glow {
+  position: absolute;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, rgba(99, 179, 237, 0.15) 0%, transparent 70%);
+  bottom: -30px; right: -30px;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.vms-value-card:hover .vms-value-card__glow { opacity: 1; }
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .vms-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vms-mission {
+    grid-template-columns: 1fr;
+  }
+  .vms-mission__left {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (max-width: 767px) {
+  .vms-section { padding: 72px 0; }
+  .vms-values-grid { grid-template-columns: 1fr; gap: 16px; }
+  .vms-header { margin-bottom: 40px; }
+  .vms-mission__left,
+  .vms-mission__right { padding: 28px 24px; }
+  .vms-mission__icon-wrap { width: 44px; height: 44px; font-size: 18px; }
+}

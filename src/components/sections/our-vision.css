@@ -1,0 +1,251 @@
+/* =========================================================
+   Our Vision Section
+========================================================= */
+
+:root {
+  --vision-primary: #2b5f9b;
+  --vision-primary-dark: #1a4575;
+  --vision-primary-light: #3d74b6;
+  --vision-accent: #6366f1;
+  --vision-ink: #1a2a3a;
+  --vision-muted: #5a6b7a;
+  --vision-paper: #ffffff;
+  --vision-surface: #f8fafc;
+}
+
+.vision-section {
+  padding: 100px 0;
+  background: var(--vision-paper);
+  position: relative;
+}
+
+.vision-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* --- Left Column - Images --- */
+
+.vision-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vision-images__main {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vision-images__main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.vision-images__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.vision-images__grid-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.vision-images__grid-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+/* --- Right Column - Content --- */
+
+.vision-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.vision-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--vision-primary);
+  margin-bottom: 20px;
+}
+
+.vision-eyebrow i {
+  font-size: 1rem;
+}
+
+.vision-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--vision-ink);
+  margin: 0 0 24px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.vision-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--vision-muted);
+  margin: 0 0 32px;
+}
+
+.vision-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.vision-feature {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: var(--vision-surface);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.vision-feature:hover {
+  border-color: var(--vision-primary);
+  box-shadow: 0 8px 24px rgba(43, 95, 155, 0.1);
+  transform: translateX(8px);
+}
+
+.vision-feature__icon {
+  flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--vision-primary), var(--vision-primary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.vision-feature__content {
+  flex: 1;
+}
+
+.vision-feature__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--vision-ink);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.vision-feature__description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--vision-muted);
+  margin: 0;
+}
+
+.vision-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, var(--vision-primary), var(--vision-primary-dark));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.vision-button:hover {
+  background: linear-gradient(135deg, var(--vision-primary-light), var(--vision-primary));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43, 95, 155, 0.3);
+}
+
+.vision-button i {
+  transition: transform 0.3s ease;
+}
+
+.vision-button:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 1024px) {
+  .vision-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .vision-images {
+    order: 1;
+  }
+
+  .vision-content {
+    order: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .vision-section {
+    padding: 60px 0;
+  }
+
+  .vision-title {
+    font-size: 2rem;
+  }
+
+  .vision-images__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-feature {
+    padding: 16px;
+  }
+
+  .vision-feature__icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .vision-button {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+  }
+}

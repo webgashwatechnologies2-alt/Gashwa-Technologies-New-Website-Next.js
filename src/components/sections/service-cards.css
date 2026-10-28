@@ -1,0 +1,265 @@
+/* =========================================================
+   Service Cards — Dotted Pattern Background Design
+========================================================= */
+
+:root {
+  --sc-primary: #2b5f9b;
+  --sc-primary-dark: #1a4575;
+  --sc-primary-light: #3d74b6;
+  --sc-ink: #1a2a3a;
+  --sc-muted: #5a6b7a;
+  --sc-paper: #f5f5f5;
+  --sc-surface: #ffffff;
+  --sc-border: #e0e0e0;
+}
+
+.sc-section {
+  padding: 50px 0;
+  background: var(--sc-paper);
+  position: relative;
+}
+
+/* Dotted pattern background */
+.sc-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.sc-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* --- Headline --- */
+
+.sc-headline {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sc-headline h2 {
+  color: var(--sc-ink);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.sc-headline h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sc-primary), var(--sc-primary-light));
+  border-radius: 2px;
+}
+
+/* --- Card shell --- */
+
+.sc-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--sc-surface);
+  border-radius: 16px 16px 8px 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.sc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Media --- */
+
+.sc-card__media {
+  position: relative;
+  min-height: 250px;
+  overflow: hidden;
+}
+
+.sc-card__media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.sc-card:hover .sc-card__media img {
+  transform: scale(1.05);
+}
+
+/* --- Blue Overlay Banner --- */
+
+.sc-card__ribbon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: linear-gradient(135deg, var(--sc-primary) 0%, var(--sc-primary-dark) 100%);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 0 0 16px 16px;
+}
+
+.sc-card__ribbon-icon {
+  flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sc-primary-light);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.sc-card__ribbon-icon i {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.sc-card__ribbon-title {
+  flex: 1;
+}
+
+.sc-card__ribbon-title span {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* --- Body --- */
+
+.sc-card__body {
+  padding: 24px 24px 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--sc-surface);
+}
+
+.sc-card__body p {
+  margin: 0 0 24px;
+  color: var(--sc-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.sc-card__more {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  color: var(--sc-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.sc-card__more-line {
+  height: 2px;
+  width: 100px;
+  background: var(--sc-primary);
+  transition: width 0.3s ease;
+}
+
+.sc-card__more:hover {
+  color: var(--sc-primary-dark);
+}
+
+.sc-card__more:hover .sc-card__more-line {
+  width: 130px;
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 1024px) {
+  .sc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sc-section {
+    padding: 60px 0;
+  }
+
+  .sc-headline {
+    margin-bottom: 40px;
+  }
+
+  .sc-headline h2 {
+    font-size: 1.8rem;
+  }
+
+  .sc-headline h2::after {
+    width: 60px;
+    bottom: -12px;
+  }
+
+  .sc-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sc-card__ribbon {
+    padding: 16px 20px;
+  }
+
+  .sc-card__ribbon-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .sc-card__ribbon-icon i {
+    font-size: 1.1rem;
+  }
+
+  .sc-card__ribbon-title span {
+    font-size: 1rem;
+  }
+
+  .sc-card__body {
+    padding: 20px 20px 28px;
+  }
+}

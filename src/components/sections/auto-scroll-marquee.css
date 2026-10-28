@@ -1,0 +1,78 @@
+/* =========================================================
+   Auto Scroll Marquee
+========================================================= */
+
+.marquee-section {
+  width: 100%;
+  background: linear-gradient(135deg, #2b5f9b 0%, #1a4575 100%);
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-flex;
+  animation: scroll 40s linear infinite;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 30px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.marquee-separator {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  margin: 0 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .marquee-item {
+    font-size: 0.85rem;
+    padding: 0 20px;
+  }
+
+  .marquee-separator {
+    font-size: 1rem;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-item {
+    font-size: 0.75rem;
+    padding: 0 15px;
+  }
+
+  .marquee-separator {
+    font-size: 0.9rem;
+    margin: 0 6px;
+  }
+}

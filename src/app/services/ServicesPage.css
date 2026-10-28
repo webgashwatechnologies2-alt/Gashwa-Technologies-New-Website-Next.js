@@ -1,0 +1,676 @@
+/* =====================================================
+   ISN-Style Services Page CSS
+   ===================================================== */
+
+/* ---- Services Cards Grid ---- */
+
+.isn-services-section-head {
+  margin-bottom: 40px;
+}
+.isn-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2B5F9B;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+.isn-eyebrow::before,
+.isn-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background: #2B5F9B;
+  border-radius: 2px;
+}
+.isn-section-title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #13213c;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+.isn-section-title span {
+  color: #2B5F9B;
+}
+.isn-section-desc {
+  font-size: 14.5px;
+  color: #6b7280;
+  line-height: 1.7;
+  max-width: 580px;
+  margin: 0;
+}
+.isn-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  overflow: visible;
+}
+
+.isn-scard {
+  background: #fff;
+  border: 1px solid #e8eaf0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+.isn-scard:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+.isn-scard-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;  /* clip top of image inside card */
+}
+
+.isn-scard-icon-wrap {
+  position: absolute;
+  top: 162px;
+  left: 20px;
+  width: 52px;
+  height: 52px;
+  background: #2B5F9B;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.isn-scard-icon-wrap i {
+  color: #fff;
+  font-size: 20px;
+}
+.isn-scard-body {
+  padding: 38px 20px 20px;
+}
+.isn-scard-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #13213c;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.isn-scard-body p {
+  font-size: 13.5px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+.isn-scard-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2B5F9B;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+.isn-scard-btn:hover {
+  gap: 10px;
+  color: #e55a25;
+}
+
+
+/* ---- Why Choose Us ---- */
+.isn-choose-section {
+  padding: 70px 0;
+  background: #f8f9fb;
+}
+.isn-choose-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.isn-choose-images {
+  position: relative;
+}
+.isn-choose-img-main {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  max-height: 440px;
+  display: block;
+}
+.isn-choose-img-badge {
+  position: absolute;
+  bottom: 24px;
+  left: -20px;
+  background: #2B5F9B;
+  color: #fff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  box-shadow: 0 6px 24px rgba(255,107,53,0.4);
+}
+.isn-choose-img-badge strong {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+.isn-choose-img-badge span {
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.3;
+}
+.isn-choose-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.isn-choose-title {
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 800;
+  color: #13213c;
+  line-height: 1.25;
+  margin: 0;
+}
+.isn-choose-title span {
+  color: #2B5F9B;
+}
+.isn-choose-desc {
+  font-size: 14.5px;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+}
+.isn-choose-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.isn-cfeat {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: box-shadow 0.2s;
+}
+.isn-cfeat:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+.isn-cfeat-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 8px;
+  background: #fff3ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.isn-cfeat-icon i {
+  color: #2B5F9B;
+  font-size: 16px;
+}
+.isn-cfeat-text h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #13213c;
+  margin: 0 0 4px;
+}
+.isn-cfeat-text p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+.isn-choose-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2B5F9B;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.2s, transform 0.2s;
+}
+.isn-choose-cta:hover {
+  background: #e55a25;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* ---- Stats ---- */
+.isn-stats-section {
+  padding: 50px 0;
+  background: #fff;
+}
+.isn-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.isn-stat-item {
+  text-align: center;
+  padding: 28px 20px;
+  border-radius: 12px;
+  background: #f8f9fb;
+  border: 1px solid #eee;
+  transition: box-shadow 0.2s;
+}
+.isn-stat-item:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+}
+.isn-stat-icon {
+  width: 50px;
+  height: 50px;
+  background: #2B5F9B;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.isn-stat-icon i {
+  color: #fff;
+  font-size: 20px;
+}
+.isn-stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #13213c;
+  line-height: 1;
+  display: block;
+  margin-bottom: 6px;
+}
+.isn-stat-label {
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ---- Testimonials ---- */
+.isn-testi-section {
+  padding: 70px 0;
+  background: #f8f9fb;
+}
+.isn-testi-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 50px;
+  align-items: center;
+}
+.isn-testi-left img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  max-height: 380px;
+}
+.isn-testi-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.isn-testi-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #13213c;
+  margin: 0;
+  line-height: 1.25;
+}
+.isn-testi-main-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.isn-testi-quote-icon {
+  font-size: 38px;
+  color: #2B5F9B;
+  line-height: 1;
+  margin-bottom: 10px;
+  display: block;
+}
+.isn-testi-text {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0 0 16px;
+}
+.isn-testi-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.isn-testi-author img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.isn-testi-author-info strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #13213c;
+}
+.isn-testi-author-info span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+.isn-testi-thumbs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.isn-testi-thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.isn-testi-thumb:hover,
+.isn-testi-thumb.active {
+  border-color: #2B5F9B;
+  transform: scale(1.08);
+}
+
+/* ---- Brands ---- */
+.isn-brands-section {
+  padding: 50px 0;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.isn-brands-eyebrow {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.isn-brands-eyebrow::before,
+.isn-brands-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: #d1d5db;
+}
+.isn-brands-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.isn-brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.55;
+  transition: opacity 0.2s, transform 0.2s;
+  filter: grayscale(1);
+}
+.isn-brand-item:hover {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+.isn-brand-item img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ---- Pricing ---- */
+.isn-pricing-section {
+  padding: 70px 0 80px;
+  background: #f8f9fb;
+}
+.isn-pricing-head {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.isn-pricing-title {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 800;
+  color: #13213c;
+  margin: 10px 0 0;
+}
+.isn-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.isn-plan {
+  background: #2B5F9B;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.isn-plan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(255,107,53,0.35);
+}
+.isn-plan:nth-child(2) {
+  background: #2B5F9B;
+}
+.isn-plan:nth-child(3) {
+  background: #d04e15;
+}
+.isn-plan-head {
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.isn-plan-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  display: block;
+}
+.isn-plan-price-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.isn-plan-currency {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 8px;
+}
+.isn-plan-price {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+.isn-plan-period {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  padding-bottom: 8px;
+}
+.isn-plan-pages {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.7);
+}
+.isn-plan-body {
+  padding: 20px 24px 24px;
+}
+.isn-plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.isn-plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+}
+.isn-plan-features li i {
+  font-size: 11px;
+  min-width: 14px;
+}
+.isn-plan-features li.no {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+.isn-plan-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 13px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: background 0.2s;
+}
+.isn-plan-btn:hover {
+  background: rgba(255,255,255,0.28);
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.isn-services-section{--isn-blue:#2B5F9B;--isn-blue-dark:#214d80;--isn-navy:#0d1f3d;--isn-text:#728198;--isn-number:#d5e2f2;padding:55px 20px;background:#fff;font-family:"Plus Jakarta Sans","Segoe UI",sans-serif}
+.isn-services-container{width:100%;max-width:1400px;margin:0 auto;padding:38px 40px 40px;background:linear-gradient(135deg,#f8fbff 0%,#edf4fc 100%);border-radius:0 0 28px 28px;box-sizing:border-box}
+.isn-services-header{display:grid;grid-template-columns:minmax(0,1fr) 370px;align-items:end;gap:70px;margin-bottom:32px}
+.isn-services-heading{min-width:0}
+.isn-eyebrow{display:flex;align-items:center;gap:12px;width:max-content;margin-bottom:12px;color:var(--isn-blue);font-size:10px;font-weight:700;line-height:1;letter-spacing:1.1px;text-transform:uppercase}
+.isn-eyebrow:before{content:"";width:28px;height:2px;background:var(--isn-blue)}
+.isn-eyebrow:after{content:"";width:38px;height:2px;background:var(--isn-blue)}
+.isn-section-title{margin:0;color:var(--isn-navy);font-size:46px;font-weight:800;line-height:1.06;letter-spacing:-1.8px}
+.isn-section-title span{display:block;color:#2f70c4}
+.isn-section-desc{position:relative;max-width:350px;margin:0 15px 2px 0;color:var(--isn-text);font-size:12px;line-height:1.7}
+.isn-section-desc:after{content:"";position:absolute;right:-28px;top:-20px;width:55px;height:55px;background-image:radial-gradient(#9db6d8 1.4px,transparent 1.4px);background-size:9px 9px;opacity:.45}
+.isn-services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.isn-scard{position:relative;height:255px;min-width:0;background:#fff;border:1px solid #e1e8f0;border-radius:6px;overflow:hidden;box-shadow:0 7px 20px rgba(35,76,120,.055);box-sizing:border-box;transition:transform .3s ease,box-shadow .3s ease}
+.isn-scard:hover{transform:translateY(-4px);box-shadow:0 13px 30px rgba(43,95,155,.13)}
+.isn-scard-pattern{position:absolute;inset:0;z-index:0;background:linear-gradient(135deg,transparent 49%,rgba(43,95,155,.025) 50%,transparent 51%),linear-gradient(45deg,transparent 49%,rgba(43,95,155,.025) 50%,transparent 51%);background-size:44px 44px;pointer-events:none}
+.isn-card-number{position:absolute;top:13px;right:17px;z-index:5;color:#2B5F9B;font-size:29px;font-weight:500;line-height:1}
+.isn-scard-content{position:relative;z-index:4;width:58%;height:100%;padding:24px 0 20px 24px;display:flex;flex-direction:column;box-sizing:border-box}
+.isn-scard-icon{display:flex;align-items:center;justify-content:center;width:53px;height:53px;flex:0 0 53px;margin-bottom:13px;background:var(--isn-blue);color:#fff;border-radius:50%;font-size:20px;box-shadow:0 6px 16px rgba(43,95,155,.23);transition:transform .3s ease}
+.isn-scard:hover .isn-scard-icon{transform:scale(1.06)}
+.isn-scard-info{display:flex;flex-direction:column;flex:1;min-width:0}
+.isn-scard-info h3{max-width:125px;margin:0 0 8px;color:var(--isn-navy);font-size:20px;font-weight:700;line-height:1.25}
+.isn-scard-info p{max-width:150px;margin:0;color:#78879b;font-size:12px;line-height:1.6}
+.isn-scard-btn{display:inline-flex;align-items:center;gap:7px;width:max-content;margin-top:auto;color:var(--isn-blue);font-size:9.5px;font-weight:700;line-height:1;text-decoration:none}
+.isn-scard-btn i{font-size:8px;transition:transform .25s ease}
+.isn-scard-btn:hover i{transform:translateX(4px)}
+.isn-scard-image{position:absolute;right:0;bottom:0;z-index:2;width:57%;height:100%;overflow:hidden;pointer-events:none}
+.isn-scard-image:before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 8%,rgba(255,255,255,.8) 23%,rgba(255,255,255,.25) 47%,transparent 72%)}
+.isn-scard-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.94;transition:transform .55s ease}
+.isn-scard:hover .isn-scard-image img{transform:scale(1.045)}
+.isn-services-cta{position:relative;height:255px;min-width:0;padding:31px 28px;overflow:hidden;background:linear-gradient(135deg,#e8f1fb 0%,#edf5fd 100%);border:1px solid #dce7f2;border-radius:6px;box-sizing:border-box}
+.isn-cta-content{position:relative;z-index:4;max-width:275px}
+.isn-cta-content span{display:flex;align-items:center;gap:10px;margin-bottom:13px;color:var(--isn-blue);font-size:8.5px;font-weight:700;line-height:1.3;letter-spacing:.8px;text-transform:uppercase}
+.isn-cta-content span:after{content:"";width:32px;height:2px;background:var(--isn-blue)}
+.isn-cta-content h3{max-width:270px;margin:0;color:var(--isn-navy);font-size:17px;font-weight:700;line-height:1.4}
+.isn-cta-btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;margin-top:20px;padding:13px 22px;background:var(--isn-blue);color:#fff;border-radius:7px;font-size:9px;font-weight:700;line-height:1;text-decoration:none;text-transform:uppercase;letter-spacing:.4px;box-shadow:0 8px 18px rgba(43,95,155,.25);transition:background .25s ease,transform .25s ease,box-shadow .25s ease}
+.isn-cta-btn i{font-size:8px}
+.isn-cta-btn:hover{background:var(--isn-blue-dark);transform:translateY(-2px);box-shadow:0 11px 22px rgba(43,95,155,.3)}
+.isn-cta-circle{position:absolute;right:-60px;top:-55px;width:170px;height:170px;background:rgba(43,95,155,.065);border-radius:50%}
+.isn-cta-circle:before{content:"";position:absolute;left:-65px;top:95px;width:90px;height:90px;border:1px solid rgba(43,95,155,.1);border-radius:50%}
+.isn-cta-dots{position:absolute;right:18px;bottom:16px;width:62px;height:62px;background-image:radial-gradient(#7da1cb 1.4px,transparent 1.4px);background-size:9px 9px;opacity:.55}
+@media(max-width:1150px){
+.isn-services-container{padding:34px 28px 36px}
+.isn-services-header{grid-template-columns:minmax(0,1fr) 330px;gap:40px}
+.isn-section-title{font-size:40px}
+.isn-scard-content{padding-left:20px}
+.isn-scard-image{width:55%}
+}
+@media(max-width:950px){
+.isn-services-header{grid-template-columns:1fr;gap:15px}
+.isn-section-desc{max-width:550px;margin:0}
+.isn-section-desc:after{display:none}
+.isn-services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.isn-services-cta{grid-column:1/-1}
+}
+@media(max-width:650px){
+.isn-services-section{padding:30px 12px}
+.isn-services-container{padding:28px 18px 22px;border-radius:18px}
+.isn-section-title{font-size:34px}
+.isn-services-grid{grid-template-columns:1fr;gap:14px}
+.isn-scard{height:250px}
+.isn-services-cta{grid-column:auto;height:250px}
+}
+@media(max-width:420px){
+.isn-section-title{font-size:30px}
+.isn-eyebrow{font-size:8px;letter-spacing:.8px}
+.isn-scard-content{width:61%;padding-left:18px}
+.isn-scard-image{width:62%}
+.isn-scard-info p{max-width:125px}
+.isn-card-number{font-size:27px}
+.isn-cta-content h3{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){
+.isn-scard,.isn-scard-icon,.isn-scard-image img,.isn-scard-btn i,.isn-cta-btn{transition:none}
+}
+
+
+
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .isn-services-grid { grid-template-columns: repeat(2, 1fr); }
+  .isn-pricing-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .isn-services-grid { grid-template-columns: 1fr; }
+  .isn-choose-layout { grid-template-columns: 1fr; gap: 36px; }
+  .isn-choose-img-badge { left: 10px; }
+  .isn-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .isn-testi-layout { grid-template-columns: 1fr; }
+  .isn-pricing-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,385 @@
+.faq-section {
+  background-color: #ffffff;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.decorative-dots {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 1;
+}
+
+.dot-primary {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #265B99;
+  opacity: 0.8;
+}
+
+.dot-secondary {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #265B99;
+  opacity: 0.6;
+}
+
+.faq-container {
+  position: relative;
+  z-index: 2;
+}
+
+.faq-row {
+  align-items: stretch;
+}
+
+.faq-content-left {
+  padding-right: 15px;
+}
+
+.subtitle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.subtitle-line {
+  width: 20px;
+  height: 2px;
+  background-color: #265B99;
+  display: inline-block;
+}
+
+.subtitle-text {
+  color: #265B99;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.faq-title {
+  padding-right: 15px;
+  z-index: 2;
+}
+
+.faq-accordion {
+  align-items: stretch;
+}
+
+.faq-accordion-list {
+  padding-right: 15px;
+}
+
+.description-paragraph {
+  color: #6B7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accordion-item-expanded {
+  display: flex;
+  align-items: flex-start;
+}
+
+.accordion-bar {
+  width: 4px;
+  height: 22px;
+  background-color: #265B99;
+  border-radius: 4px;
+  margin-right: 12px;
+  margin-top: 0;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-bar-expanded {
+  width: 4px;
+  height: 42px;
+  background-color: #265B99;
+  border-radius: 4px;
+  margin-right: 12px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.card-wrapper {
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+/* Expanded Card */
+.expanded-card {
+  border-radius: 20px;
+  border: 1px solid #E5E7EB;
+  offset: hidden;
+  box-shadow: 0 8px 24px rgba(38, 91, 153, 0.08);
+  transition: all 0.3s ease;
+}
+
+.expanded-header {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #265B99;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.header-left-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.check-circle-active {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #265B99;
+  flex-shrink: 0;
+}
+
+.question-text-active {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.icon-white {
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.expanded-body {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.thumb-image {
+  width: 75px;
+  height: 55px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(38, 91, 153, 0.2);
+}
+
+.answer-text {
+  color: #6B7280;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Collapsed Button Card */
+.collapsed-button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.check-circle-collapsed {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #265B99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.question-text-collapsed {
+  color: #1F2937;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.icon-gray {
+  color: #374151;
+  flex-shrink: 0;
+}
+
+/* Right Gallery Column */
+.gallery-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex: 1;
+}
+
+.stacked-images-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.image-card-wrapper {
+  flex: 1;
+  border-radius: 28px;
+  offset: hidden;
+  min-height: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  padding: relative;
+}
+
+.gallery-image {
+  object-fit: cover;
+  border: 2px solid rgba(38, 91, 153, 0.2);
+}
+
+.tall-image-wrapper {
+  flex: 1;
+  border-radius: 28px;
+  offset: hidden;
+  height: 100%;
+  min-height: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  padding: relative;
+}
+
+.gallery-image {
+  object-fit: cover;
+  border: 2px solid rgba(38, 91, 153, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .faq-section {
+    padding: 70px 0;
+  }
+
+  .faq-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .faq-content-left {
+    padding-right: 0;
+  }
+
+  .faq-title {
+    padding-right: 0;
+  }
+
+  .faq-accordion-list {
+    padding-right: 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stacked-images-col {
+    flex-direction: row;
+  }
+
+  .image-card-wrapper,
+  .tall-image-wrapper {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq-section {
+    padding: 60px 0;
+  }
+
+  .subtitle-text {
+    font-size: 0.8rem;
+  }
+
+  .faq-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .description-paragraph {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+
+  .expanded-header {
+    padding: 12px 16px;
+  }
+
+  .question-text-active {
+    font-size: 0.9rem;
+  }
+
+  .expanded-body {
+    padding: 14px 16px;
+  }
+
+  .thumb-image {
+    width: 60px;
+    height: 45px;
+  }
+
+  .answer-text {
+    font-size: 0.85rem;
+  }
+
+  .collapsed-button {
+    padding: 10px 16px;
+  }
+
+  .question-text-collapsed {
+    font-size: 0.9rem;
+  }
+
+  .gallery-grid {
+    gap: 16px;
+  }
+
+  .stacked-images-col {
+    flex-direction: column;
+  }
+
+  .image-card-wrapper,
+  .tall-image-wrapper {
+    min-height: 180px;
+  }
+}
