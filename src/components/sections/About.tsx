@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import './About.css';
 
-import about2Img from '../../../public/assets/img/about/aboutnew.jpg';
+import about2Img from '../../../public/assets/img/hero/Namaste-Himachal-Studio-Interview.png';
 import aboutShape1 from '../../../public/assets/img/shape/aboutShape1_4.png';
 import gashwaSectionImg from '../../../public/assets/img/hero/award-winning.jpg';
 
@@ -63,7 +63,7 @@ export default function About() {
               </div>
               <div className="showcase-image-container">
                 <Image
-                  src={gashwaSectionImg}
+                  src={gashwaSectionImg }
                   alt="Gashwa Technologies Showcase"
                   className="showcase-image"
                 />

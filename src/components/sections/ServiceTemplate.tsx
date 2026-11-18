@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import './ServiceTemplate.css';
 import { ServiceData } from '@/data/services';
 
@@ -113,6 +114,10 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', state: '', services: '', requirements: '' });
+  const [submissionNotice, setSubmissionNotice] = useState(false);
+  const pathname = usePathname();
+  const slideCount = data.hero.slides.length;
+  const activeSlideIndex = slideCount > 0 ? currentSlide % slideCount : 0;
 
   const featuresRef = useInView();
   const portfolioRef = useInView();
@@ -120,8 +125,21 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
   const processRef = useInView();
   const contactRef = useInView();
 
+  useEffect(() => {
+    const root = document.documentElement;
+    const previousScrollBehavior = root.style.scrollBehavior;
+    root.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = previousScrollBehavior;
+  }, [pathname]);
+
+  useEffect(() => {
+    setCurrentSlide(0);
+    setIsTransitioning(false);
+  }, [data]);
+
   const goToSlide = (index: number) => {
-    if (index === currentSlide) return;
+    if (index === activeSlideIndex) return;
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentSlide(index);
@@ -130,22 +148,34 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
   };
 
   useEffect(() => {
-    const t = setInterval(() => {
+    if (slideCount < 2) return;
+
+    let transitionTimeout: ReturnType<typeof setTimeout> | undefined;
+    const interval = setInterval(() => {
       setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentSlide((prev) => (prev + 1) % data.hero.slides.length);
+      transitionTimeout = setTimeout(() => {
+        setCurrentSlide((prev) => (prev + 1) % slideCount);
         setIsTransitioning(false);
       }, 350);
     }, 6000);
-    return () => clearInterval(t);
-  }, []);
+    return () => {
+      clearInterval(interval);
+      if (transitionTimeout) clearTimeout(transitionTimeout);
+    };
+  }, [slideCount]);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e: React.FormEvent) => { e.preventDefault(); console.log('Form submitted:', formData); };
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmissionNotice(true);
+  };
 
-  const slide = data.hero.slides[currentSlide];
+  const slide = data.hero.slides[activeSlideIndex];
+  const pageContent = data.pageContent;
+
+  if (!slide) return null;
 
   return (
     <div className="wd-page">
@@ -154,7 +184,7 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
           {data.hero.slides.map((s, i) => (
             <div
               key={i}
-              className={`wd-hero-slide ${i === currentSlide ? 'active' : ''}`}
+              className={`wd-hero-slide ${i === activeSlideIndex ? 'active' : ''}`}
               style={{ backgroundImage: `url(${s.image})` }}
             />
           ))}
@@ -162,7 +192,7 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
         <div className="wd-hero-overlay" />
         <div className="container wd-hero-inner">
           <div className={`wd-hero-content ${isTransitioning ? 'out' : 'in'}`}>
-            <span className="wd-hero-label">Website Designing Company in Himachal</span>
+            <span className="wd-hero-label">{pageContent?.heroLabel ?? 'Website Designing Company in Himachal'}</span>
             <h1 style={{ color: 'white' }} className="wd-hero-title">{slide.title}</h1>
             <p className="wd-hero-desc">{slide.description}</p>
             <div className="wd-hero-btns">
@@ -178,7 +208,7 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
             {data.hero.slides.map((_, i) => (
               <button
                 key={i}
-                className={i === currentSlide ? 'active' : ''}
+                className={i === activeSlideIndex ? 'active' : ''}
                 onClick={() => goToSlide(i)}
                 aria-label={`Slide ${i + 1}`}
               />
@@ -200,10 +230,10 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
           <nav className="wd-crumb-nav">
             <Link href="/">Home</Link>
             <i className="fa fa-angle-right" />
-            <span>Website Designing</span>
+            <span>{pageContent?.name ?? 'Website Designing'}</span>
           </nav>
           <div className="wd-crumb-row">
-            <h2>Website Designing Company in <em>Himachal Pradesh</em></h2>
+            <h2>{pageContent?.breadcrumbTitle ?? 'Website Designing Company in'} <em>{pageContent?.breadcrumbLocation ?? 'Himachal Pradesh'}</em></h2>
             <Link href="/contact" className="wd-crumb-cta">Get Free Quote <i className="fa fa-arrow-right" /></Link>
           </div>
         </div>
@@ -214,9 +244,9 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
           <div className="wd-features-layout">
             <div className="wd-features-sticky">
               <span className="wd-tag">Why Choose Us</span>
-              <h2 className="wd-title">Website Designing Company in <span>Shimla</span></h2>
+              <h2 className="wd-title">{pageContent?.featureTitle ?? 'Website Designing Company in'} <span>{pageContent?.featureLocation ?? 'Shimla'}</span></h2>
               <p className="wd-desc">
-                Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.
+                {pageContent?.featureDescription ?? 'Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.'}
               </p>
               <div className="wd-features-stats">
                 {data.stats.slice(0, 2).map((s, i) => (
@@ -266,7 +296,7 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
               <span className="pf-label">Our Portfolio</span>
               <h2 className="pf-heading">Recent <span>Works</span></h2>
               <p className="pf-lead">
-                Hand-crafted websites for travel, hospitality &amp; media brands — fast, responsive &amp; conversion-focused.
+                {pageContent?.portfolioDescription ?? 'Hand-crafted websites for travel, hospitality &amp; media brands — fast, responsive &amp; conversion-focused.'}
               </p>
             </div>
             <Link href="/projects" className="pf-top-btn">
@@ -301,13 +331,17 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
               <div className="wd-wheel">
                 <div className="wd-wheel-center">
                   <div className="wd-wheel-center-inner">
-                    <span>{data.transformation.centerTextLine1}<br />{data.transformation.centerTextLine2}</span>
+                    <span className="wd-wheel-text-1">{data.transformation.centerTextLine1}</span>
+                    <span className="wd-wheel-text-2">{data.transformation.centerTextLine2}</span>
                   </div>
                 </div>
                 {data.transformation.quadrants.map((q, i) => (
                   <div key={i} className={`wd-quadrant wd-q${i + 1}`}>
                     {i === 2 && <i className={`${q.iconClass} wd-q-icon`} />}
-                    <span>{q.labelLine1}<br />{q.labelLine2}</span>
+                    <div className="wd-quadrant-text">
+                      <span className="wd-q-line1">{q.labelLine1}</span>
+                      <span className="wd-q-line2">{q.labelLine2}</span>
+                    </div>
                     {i !== 2 && <i className={`${q.iconClass} wd-q-icon`} />}
                   </div>
                 ))}
@@ -437,6 +471,12 @@ export default function ServiceTemplate({ data }: { data: ServiceData }) {
             <div className="wd-form-box">
               <span className="wd-tag">Get in Touch</span>
               <h2 className="wd-title">Let&apos;s Discuss Your <span>Project</span></h2>
+              {submissionNotice && (
+                <p className="alert alert-warning" role="status">
+                  Online enquiry delivery is not available yet. Please email{' '}
+                  <a href="mailto:info@gashwatechnologies.com">info@gashwatechnologies.com</a>.
+                </p>
+              )}
               <form onSubmit={handleSubmit} className="wd-form">
                 <div className="wd-frow">
                   <div className="wd-inp"><input type="text" name="name" placeholder=" " value={formData.name} onChange={handleFormChange} required /><label>Your Name</label></div>

@@ -55,10 +55,10 @@ const SERVICE_CATEGORIES: ServiceItem[] = [
   },
   {
     label: 'Internet Marketing',
-    href: '/services/mobile-application-development',
+    href: '/services/internet-marketing',
     hasDropdown: true,
-    icon: 'fa-mobile-screen',
-    description: 'Native apps for iOS and Android',
+    icon: 'fa-bullhorn',
+    description: 'Digital marketing strategies that grow your reach',
     dropdownItems: [
       { label: 'Search Engine Optimizing', href: '/search-engine-optimizing' },
       { label: 'Performance Marketing', href: '/performance-marketing' },
@@ -167,6 +167,7 @@ const NAV_ITEMS = [
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
   const [activeServiceDropdown, setActiveServiceDropdown] = useState<string | null>(null);
   const [activeChildDropdown, setActiveChildDropdown] = useState<string | null>(null);
   const pathname = usePathname();
@@ -181,6 +182,10 @@ export default function Header() {
     if (href === '/') return pathname === '/';
     return pathname === href;
   };
+
+  const toggleMobileSubmenu = (label: string) => {
+    setOpenMobileSubmenu((prev) => (prev === label ? null : label));
+  };
   return (
     <>
       {isMobileMenuOpen && (
@@ -188,14 +193,15 @@ export default function Header() {
       )}
       <div className={`mobile-menu ${isMobileMenuOpen ? 'mobile-menu--open' : ''}`}>
         <div className="mobile-menu__header">
-          <Link href="/" className="mobile-menu__logo">
+          <Link href="/" className="mobile-menu__logo" onClick={() => setIsMobileMenuOpen(false)}>
             <img src="/assets/img/gashwatechnologie-logo.png" alt="Gashwa Technologies" />
           </Link>
-          <button className="mobile-menu__close" onClick={() => setIsMobileMenuOpen(false)}>
+          <button className="mobile-menu__close" onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu">
             <i className="fas fa-times" />
           </button>
         </div>
         <nav className="mobile-menu__nav">
+          <div className="mobile-menu__section-title">MAIN NAVIGATION</div>
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
@@ -206,21 +212,78 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
+
+          <div className="mobile-menu__section-title" style={{ marginTop: '16px' }}>OUR SERVICES</div>
           {SERVICE_CATEGORIES.map((item) => (
+            <div key={item.href} className="mobile-menu__accordion-item">
+              <div className="mobile-menu__accordion-header">
+                <Link
+                  href={item.href}
+                  className="mobile-menu__link mobile-menu__link--service"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <i className={`fa-solid ${item.icon || 'fa-folder'} mobile-menu__service-icon`} />
+                  <span>{item.label}</span>
+                </Link>
+                {item.dropdownItems && item.dropdownItems.length > 0 && (
+                  <button
+                    type="button"
+                    className="mobile-menu__accordion-toggle"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      toggleMobileSubmenu(item.label);
+                    }}
+                    aria-label={`Toggle ${item.label} submenu`}
+                  >
+                    <i
+                      className={`fa-solid fa-chevron-down ${
+                        openMobileSubmenu === item.label ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                )}
+              </div>
+              {item.dropdownItems && openMobileSubmenu === item.label && (
+                <div className="mobile-menu__subitems">
+                  {item.dropdownItems.map((sub) => (
+                    <Link
+                      key={sub.href}
+                      href={sub.href}
+                      className="mobile-menu__subitem"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <i className="fa-solid fa-angle-right" />
+                      <span>{sub.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+
+          <div className="mobile-menu__footer">
             <Link
-              key={item.href}
-              href={item.href}
-              className="mobile-menu__link mobile-menu__link--service"
+              href="/pay-now"
+              className="mobile-menu__pay-btn"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {item.label}
+              Pay Now <i className="fa-solid fa-arrow-right" />
             </Link>
-          ))}
+            <div className="mobile-menu__contact">
+              <a href="tel:+919317734219" className="mobile-menu__contact-item">
+                <i className="fa-solid fa-phone" /> +91-93177-34219
+              </a>
+              <a href="mailto:info@gashwatechnologies.com" className="mobile-menu__contact-item">
+                <i className="fa-solid fa-envelope" /> info@gashwatechnologies.com
+              </a>
+            </div>
+          </div>
         </nav>
       </div>
       <header className={`main-header ${isSticky ? 'main-header--sticky' : ''}`}>
         <div className="header-top">
-          <div style={{padding : '0px'}} className="container">
+          <div className="container header-top__container">
             <div className="header-top__inner">
               <Link href="/" className="header-logo">
                 <img src="/assets/img/gashwatechnologie-logo.png" alt="Gashwa Technologies" />

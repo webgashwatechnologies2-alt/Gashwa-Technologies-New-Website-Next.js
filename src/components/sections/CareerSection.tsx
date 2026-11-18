@@ -130,7 +130,7 @@ export default function CareerSection() {
 
               <p className="career-text mb-3">
                 A lot of our staff have been with us since the company started
-                and in that time we've never lost a client. Consistency of
+                and in that time we&apos;ve never lost a client. Consistency of
                 quality and approach is maintained because Webheads love what
                 they do and our clients seem to love the results.
               </p>
@@ -167,7 +167,7 @@ export default function CareerSection() {
                 If you are searching for Web Designing Jobs in Shimla. We keep
                 our staff. And we keep our clients. And we think that those two
                 facts might be related. A lot of our staff have been with us
-                since the company started and in that time we've never lost a
+                since the company started and in that time we&apos;ve never lost a
                 client.
               </p>
             </div>
@@ -186,7 +186,48 @@ export default function CareerSection() {
           </h2>
         </div>
 
-        <div className="table-responsive career-table-wrapper mb-5">
+        {/* Mobile View: Job Cards (<= 767px) */}
+        <div className="career-mobile-cards d-md-none mb-5">
+          {jobOpenings.map((job) => (
+            <div className="career-mobile-card" key={job.vacancy}>
+              <div className="career-mcard-header">
+                <div className="career-mcard-title-wrap">
+                  <span className="career-mcard-badge">OPENING</span>
+                  <h3 className="career-mcard-title">{job.vacancy}</h3>
+                </div>
+                <div className="career-mcard-positions">
+                  <span className="position-badge">{job.positions}</span>
+                  <small>Positions</small>
+                </div>
+              </div>
+
+              <div className="career-mcard-meta">
+                <div className="career-meta-pill">
+                  <i className="fa-regular fa-clock" />
+                  <span>Exp: <strong>{job.experience}</strong></span>
+                </div>
+                <div className="career-meta-pill">
+                  <i className="fa-solid fa-location-dot" />
+                  <span>Shimla, HP</span>
+                </div>
+              </div>
+
+              <div className="career-mcard-skills">
+                <span className="career-skills-label">Desired Skills:</span>
+                <p className="career-skills-text">{job.skills}</p>
+              </div>
+
+              <div className="career-mcard-footer">
+                <a href="#apply-section" className="career-mcard-apply">
+                  Apply For Position <i className="fa-solid fa-arrow-right" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop / Tablet View: Table (>= 768px) */}
+        <div className="table-responsive career-table-wrapper d-none d-md-block mb-5">
           <table className="table align-middle career-table mb-0">
             <thead>
               <tr>
@@ -215,7 +256,7 @@ export default function CareerSection() {
         </div>
 
         {/* Apply Section */}
-        <div className="row justify-content-center">
+        <div className="row justify-content-center" id="apply-section">
           <div className="col-lg-11">
             <div className="apply-card">
               <div className="row align-items-center g-4">

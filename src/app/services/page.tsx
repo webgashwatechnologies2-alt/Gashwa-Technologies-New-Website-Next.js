@@ -6,14 +6,6 @@ import Breadcrumb from '@/components/Breadcrumb';
 import FaqSection from '@/components/sections/FaqSection';
 import './ServicesPage.css';
 
-interface ServiceItem {
-  icon: string;
-  image: string;
-  title: string;
-  desc: string;
-  link: string;
-}
-
 interface PricingPlan {
   name: string;
   price: string;

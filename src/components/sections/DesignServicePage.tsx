@@ -1,4 +1,5 @@
 import AutoScrollMarquee from "@/components/sections/AutoScrollMarquee";
+import Link from "next/link";
 import BusinessWebsiteEnquiry from "@/components/sections/BusinessWebsiteEnquiry";
 import ServiceCards from "@/components/sections/ServiceCards";
 import OurVision from "@/components/sections/OurVision";
@@ -13,7 +14,7 @@ type DesignServicePageProps = {
 
 export default function DesignServicePage({ data }: DesignServicePageProps) {
   return (
-    <main className="sw-root">
+    <div className="sw-root">
       <div className="sw-ambient" aria-hidden="true">
         <div className="sw-ambient__blob sw-ambient__blob--1" />
         <div className="sw-ambient__blob sw-ambient__blob--2" />
@@ -31,9 +32,9 @@ export default function DesignServicePage({ data }: DesignServicePageProps) {
           <div className="services-hero__container">
             <div className="services-hero__content">
               <div className="services-hero__breadcrumb">
-                <a href="/">Home</a>
+                <Link href="/">Home</Link>
                 <span>›</span>
-                <a href="/services">Services</a>
+                <Link href="/services">Services</Link>
                 <span>›</span>
                 <span className="active">{data.hero.title}</span>
               </div>
@@ -77,6 +78,6 @@ export default function DesignServicePage({ data }: DesignServicePageProps) {
           ctaHref={data.faq.ctaHref}
         />
       )}
-    </main>
+    </div>
   );
 }

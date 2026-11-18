@@ -7,8 +7,6 @@ import {
   ArrowRight, 
   PhoneCall, 
   CheckCircle2, 
-  Globe2, 
-  Box, 
   Sparkles, 
   Zap,
   ShieldCheck,

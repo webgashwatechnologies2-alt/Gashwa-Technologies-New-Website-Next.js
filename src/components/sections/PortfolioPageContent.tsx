@@ -17,6 +17,7 @@ type PortfolioItem = {
   title: string;
   image: string;
   logo: string;
+  url: string;
   technologies: string[];
   category: string;
 };
@@ -28,6 +29,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Lexor Miami",
     image: "/assets/img/portfolio/portflio_trtrt.webp",
     logo: "https://gashwatechnologies.com/images/anathresort.png",
+    url: "https://www.lexormiami.com",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "WEBSITE",
   },
@@ -35,6 +37,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Aanantham Resort",
     image: "/assets/img/portfolio/anathresort.webp",
     logo: "https://gashwatechnologies.com/images/leadcometlogo.png",
+    url: "https://aananthamresort.com",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "WEBSITE",
   },
@@ -42,6 +45,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Leadcomet Digital",
     image: "/assets/img/portfolio/leadcometlogo.webp",
     logo: "https://gashwatechnologies.com/images/kmclogo.png",
+    url: "https://leadcometdigital.com",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "DEVELOPMENT",
   },
@@ -49,6 +53,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Meditationin New York",
     image: "/assets/img/portfolio/kmclogo.webp",
     logo: "https://gashwatechnologies.com/images/swimining_logo.png",
+    url: "https://meditationinnewyork.org",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "DESIGN",
   },
@@ -56,6 +61,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Leni Swims",
     image: "/assets/img/portfolio/swimining_logo.webp",
     logo: "https://gashwatechnologies.com/images/pastalignlogo.png",
+    url: "https://leniswims.com",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "WEBSITE",
   },
@@ -63,6 +69,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Pastorsline",
     image: "/assets/img/portfolio/pastalignlogo.webp",
     logo: "https://gashwatechnologies.com/images/ONE-SIDESTT.png",
+    url: "https://pastorsline.com",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "DEVELOPMENT",
   },
@@ -70,6 +77,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "On One Studios",
     image: "/assets/img/portfolio/ONE-SIDESTT.webp",
     logo: "https://gashwatechnologies.com/images/NEWAREA_LOGO.png",
+    url: "https://ononestudios.com",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "DESIGN",
   },
@@ -77,6 +85,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "New Era Tour",
     image: "/assets/img/portfolio/NEWAREA_LOGO.webp",
     logo: "https://gashwatechnologies.com/images/kool_door_logoqq.png",
+    url: "https://neweratour.com",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "WEBSITE",
   },
@@ -84,6 +93,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Kool Door",
     image: "/assets/img/portfolio/kool_door_logoqq.webp",
     logo: "https://gashwatechnologies.com/images/HIMALYAN_TRAVELS.png",
+    url: "https://kooldoor.in",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "DEVELOPMENT",
   },
@@ -91,6 +101,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Himalaya Travel World",
     image: "/assets/img/portfolio/HIMALYAN_TRAVELS.webp",
     logo: "https://gashwatechnologies.com/images/HARMONY-LOGO.png",
+    url: "https://himalayatravelworld.com",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "WEBSITE",
   },
@@ -98,6 +109,7 @@ const portfolioItems: PortfolioItem[] = [
     title: "Harmony Hotel Manali",
     image: "/assets/img/portfolio/HARMONY-LOGO.webp",
     logo: "https://gashwatechnologies.com/images/HARMONY-LOGO.png",
+    url: "https://harmonyhotelmanali.com",
     technologies: ["Design", "HTML5/CSS3", "JavaScript", "jQuery"],
     category: "WEBSITE",
   },
@@ -232,6 +244,9 @@ export default function PortfolioPageContent() {
             <div className="col-12 col-md-6 col-xl-4" key={item.title}>
               <article className="portfolio-card h-100">
                 <div className="portfolio-card-image">
+                  <div className="portfolio-card-mesh" aria-hidden="true" />
+                  <div className="portfolio-card-glow" aria-hidden="true" />
+
                   <img
                     src={item.image}
                     alt={`${item.title} project`}
@@ -239,21 +254,30 @@ export default function PortfolioPageContent() {
                   />
 
                   <div className="portfolio-card-number">
+                    <span className="number-dot" />
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
                   <div className="portfolio-card-category">
+                    <span className="category-dot" />
                     {item.category}
                   </div>
 
-                  <div className="portfolio-card-action">
-                    <ArrowUpRight size={20} />
-                  </div>
+                  <a
+                    href={item.url}
+                    className="portfolio-card-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Explore ${item.title} website`}
+                  >
+                    <span>Explore</span>
+                    <ArrowUpRight size={15} />
+                  </a>
                 </div>
 
                 <div className="portfolio-card-body">
-                  <div className="portfolio-project-info d-flex align-items-center gap-3">
-                    <div className="portfolio-logo flex-shrink-0">
+                  <div className="portfolio-project-header">
+                    <div className="portfolio-logo">
                       <img
                         src={item.logo}
                         alt={`${item.title} logo`}
@@ -261,21 +285,44 @@ export default function PortfolioPageContent() {
                       />
                     </div>
 
-                    <div className="portfolio-project-name">
-                      <span>PROJECT</span>
-                      <h3>{item.title}</h3>
+                    <div className="portfolio-project-meta">
+                      <span className="portfolio-project-eyebrow">
+                        {item.category === "WEBSITE"
+                          ? "WEB DESIGN & BUILD"
+                          : item.category === "DEVELOPMENT"
+                          ? "FULL-STACK APP"
+                          : "CREATIVE DESIGN"}
+                      </span>
+                      <h3 className="portfolio-project-title" title={item.title}>
+                        {item.title}
+                      </h3>
                     </div>
                   </div>
 
-                  <div className="portfolio-divider" />
-
-                  <div className="portfolio-tech d-flex flex-wrap">
+                  <div className="portfolio-tech-list">
                     {item.technologies.map((technology) => (
-                      <span key={technology}>
+                      <span key={technology} className="portfolio-tech-chip">
                         <Code2 size={11} />
                         {technology}
                       </span>
                     ))}
+                  </div>
+
+                  <div className="portfolio-card-footer">
+                    <a href="/contact" className="portfolio-explore-link">
+                      <span>View Case Study</span>
+                      <ArrowRight size={14} className="portfolio-explore-arrow" />
+                    </a>
+                    <a
+                      href={item.url}
+                      className="portfolio-live-badge"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${item.title} live website`}
+                    >
+                      <span className="portfolio-live-dot" />
+                      Live Site
+                    </a>
                   </div>
                 </div>
               </article>
@@ -382,7 +429,7 @@ export default function PortfolioPageContent() {
           <div className="row align-items-center g-4">
             <div className="col-lg-8">
               <div className="portfolio-cta-content">
-                <span>LET'S BUILD SOMETHING GREAT</span>
+                <span>LET&apos;S BUILD SOMETHING GREAT</span>
 
                 <h2>
                   Have A Project
@@ -390,7 +437,7 @@ export default function PortfolioPageContent() {
                 </h2>
 
                 <p>
-                  Tell us about your idea and let's create a digital experience
+                  Tell us about your idea and let&apos;s create a digital experience
                   that works for your business.
                 </p>
               </div>

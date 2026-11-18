@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Web Designing Training in Himachal Pradesh - Theme: #2B5F9B
+   Web Designing Training in Himachal Pradesh - Theme: #0D4892
    Ultra-Modern & Professional IT Website Design System
    ========================================================================== */
 
 :root {
-  --theme-primary: #2B5F9B;
+  --theme-primary: #0D4892;
   --theme-primary-dark: #1e4776;
   --theme-primary-deeper: #0d223c;
   --theme-primary-light: #3d7cc4;
@@ -44,7 +44,7 @@
 }
 
 /* ==========================================================================
-   ULTRA-MODERN HERO BANNER (#2B5F9B)
+   ULTRA-MODERN HERO BANNER (#0D4892)
    Clean, simple messaging with high-tech ambiance
    ========================================================================== */
 .g-wdt-hero {
@@ -705,7 +705,7 @@
 
 /* ==========================================================================
    "NEED ANY HELP?" SUPPORT CARD (Below Form)
-   Directly matching user reference image with #2B5F9B corporate theme
+   Directly matching user reference image with #0D4892 corporate theme
    ========================================================================== */
 .g-help-card {
   background: #edf3fa;
@@ -1840,7 +1840,7 @@
 
 /* Elegant Corporate District Bar */
 .g-district-bar {
-  background: linear-gradient(135deg, #0f2747 0%, #173b66 45%, #2B5F9B 100%);
+  background: linear-gradient(135deg, #0f2747 0%, #173b66 45%, #0D4892 100%);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 10px;
   padding: 13px 18px;
@@ -2402,7 +2402,7 @@
 /* CELL 3 — Growing Industry */
 .g-bento-card--accent1 {
   grid-area: ind;
-  background: linear-gradient(135deg, #2B5F9B 0%, #1a3f72 100%);
+  background: linear-gradient(135deg, #0D4892 0%, #1a3f72 100%);
   color: #ffffff;
   display: flex;
   flex-direction: column;

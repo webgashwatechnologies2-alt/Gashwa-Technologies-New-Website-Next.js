@@ -7,8 +7,8 @@ import './Hero.css';
 
 import heroBaner2 from '../../../public/assets/img/hero/herobaner2.jpg';
 import heroimage3 from '../../../public/assets/img/hero/heroimage3.jpg';
-import heroimage4 from '../../../public/assets/img/hero/heroimage4.jpg';
-import gashwatechgroupimage from '../../../public/assets/img/hero/gashwatechgroupimage.jpg';
+import heroimage4 from '../../../public/assets/img/hero/Namaste-Himachal-Studio-Interview.png';
+import gashwatechgroupimage from '../../../public/assets/img/hero/heroimage4.jpg';
 import heroimage5 from '../../../public/assets/img/hero/abtnew.jpg';
 
 interface HeroImage {
@@ -206,7 +206,7 @@ export default function Hero() {
       <div className="hero-v2__grid-pattern" />
       <div className="container">
         <div className="row align-items-center g-5">
-          <div style={{marginTop: '4%'}} className="col-lg-7 order-2 order-lg-1 hero-left-content">
+          <div style={{marginTop: '4%' , paddingLeft: '0px'}} className="col-lg-7 order-2 order-lg-1 hero-left-content">
             <div className="hero-v2__content">
               <div className="hero-v2__badge">
                 <span className="hero-v2__badge-dot" />

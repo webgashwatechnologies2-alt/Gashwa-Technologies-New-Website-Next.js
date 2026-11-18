@@ -13,7 +13,7 @@
   gap: 8px;
   font-size: 13px;
   font-weight: 700;
-  color: #2B5F9B;
+  color: #0D4892;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-bottom: 10px;
@@ -24,7 +24,7 @@
   display: inline-block;
   width: 18px;
   height: 2px;
-  background: #2B5F9B;
+  background: #0D4892;
   border-radius: 2px;
 }
 .isn-section-title {
@@ -35,7 +35,7 @@
   line-height: 1.2;
 }
 .isn-section-title span {
-  color: #2B5F9B;
+  color: #0D4892;
 }
 .isn-section-desc {
   font-size: 14.5px;
@@ -78,7 +78,7 @@
   left: 20px;
   width: 52px;
   height: 52px;
-  background: #2B5F9B;
+  background: #0D4892;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -111,13 +111,13 @@
   gap: 6px;
   font-size: 13px;
   font-weight: 600;
-  color: #2B5F9B;
+  color: #0D4892;
   text-decoration: none;
   transition: gap 0.2s;
 }
 .isn-scard-btn:hover {
   gap: 10px;
-  color: #e55a25;
+  color: #0D4892;
 }
 
 
@@ -146,7 +146,7 @@
   position: absolute;
   bottom: 24px;
   left: -20px;
-  background: #2B5F9B;
+  background: #0D4892;
   color: #fff;
   border-radius: 12px;
   padding: 14px 18px;
@@ -180,7 +180,7 @@
   margin: 0;
 }
 .isn-choose-title span {
-  color: #2B5F9B;
+  color: #0D4892;
 }
 .isn-choose-desc {
   font-size: 14.5px;
@@ -217,7 +217,7 @@
   justify-content: center;
 }
 .isn-cfeat-icon i {
-  color: #2B5F9B;
+  color: #0D4892;
   font-size: 16px;
 }
 .isn-cfeat-text h4 {
@@ -236,7 +236,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #2B5F9B;
+  background: #0D4892;
   color: #fff;
   font-size: 14px;
   font-weight: 700;
@@ -247,7 +247,7 @@
   transition: background 0.2s, transform 0.2s;
 }
 .isn-choose-cta:hover {
-  background: #e55a25;
+  background: #0D4892;
   transform: translateY(-2px);
   color: #fff;
 }
@@ -276,7 +276,7 @@
 .isn-stat-icon {
   width: 50px;
   height: 50px;
-  background: #2B5F9B;
+  background: #0D4892;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -339,7 +339,7 @@
 }
 .isn-testi-quote-icon {
   font-size: 38px;
-  color: #2B5F9B;
+  color: #0D4892;
   line-height: 1;
   margin-bottom: 10px;
   display: block;
@@ -389,7 +389,7 @@
 }
 .isn-testi-thumb:hover,
 .isn-testi-thumb.active {
-  border-color: #2B5F9B;
+  border-color: #0D4892;
   transform: scale(1.08);
 }
 
@@ -468,7 +468,7 @@
   gap: 24px;
 }
 .isn-plan {
-  background: #2B5F9B;
+  background: #0D4892;
   border-radius: 16px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -478,7 +478,7 @@
   box-shadow: 0 16px 48px rgba(255,107,53,0.35);
 }
 .isn-plan:nth-child(2) {
-  background: #2B5F9B;
+  background: #0D4892;
 }
 .isn-plan:nth-child(3) {
   background: #d04e15;
@@ -583,7 +583,7 @@
 
 
 
-.isn-services-section{--isn-blue:#2B5F9B;--isn-blue-dark:#214d80;--isn-navy:#0d1f3d;--isn-text:#728198;--isn-number:#d5e2f2;padding:55px 20px;background:#fff;font-family:"Plus Jakarta Sans","Segoe UI",sans-serif}
+.isn-services-section{--isn-blue:#0D4892;--isn-blue-dark:#214d80;--isn-navy:#0d1f3d;--isn-text:#728198;--isn-number:#d5e2f2;padding:55px 20px;background:#fff;font-family:"Plus Jakarta Sans","Segoe UI",sans-serif}
 .isn-services-container{width:100%;max-width:1400px;margin:0 auto;padding:38px 40px 40px;background:linear-gradient(135deg,#f8fbff 0%,#edf4fc 100%);border-radius:0 0 28px 28px;box-sizing:border-box}
 .isn-services-header{display:grid;grid-template-columns:minmax(0,1fr) 370px;align-items:end;gap:70px;margin-bottom:32px}
 .isn-services-heading{min-width:0}
@@ -598,14 +598,14 @@
 .isn-scard{position:relative;height:255px;min-width:0;background:#fff;border:1px solid #e1e8f0;border-radius:6px;overflow:hidden;box-shadow:0 7px 20px rgba(35,76,120,.055);box-sizing:border-box;transition:transform .3s ease,box-shadow .3s ease}
 .isn-scard:hover{transform:translateY(-4px);box-shadow:0 13px 30px rgba(43,95,155,.13)}
 .isn-scard-pattern{position:absolute;inset:0;z-index:0;background:linear-gradient(135deg,transparent 49%,rgba(43,95,155,.025) 50%,transparent 51%),linear-gradient(45deg,transparent 49%,rgba(43,95,155,.025) 50%,transparent 51%);background-size:44px 44px;pointer-events:none}
-.isn-card-number{position:absolute;top:13px;right:17px;z-index:5;color:#2B5F9B;font-size:29px;font-weight:500;line-height:1}
+.isn-card-number{position:absolute;top:13px;right:17px;z-index:5;color:#0D4892;font-size:29px;font-weight:500;line-height:1}
 .isn-scard-content{position:relative;z-index:4;width:58%;height:100%;padding:24px 0 20px 24px;display:flex;flex-direction:column;box-sizing:border-box}
 .isn-scard-icon{display:flex;align-items:center;justify-content:center;width:53px;height:53px;flex:0 0 53px;margin-bottom:13px;background:var(--isn-blue);color:#fff;border-radius:50%;font-size:20px;box-shadow:0 6px 16px rgba(43,95,155,.23);transition:transform .3s ease}
 .isn-scard:hover .isn-scard-icon{transform:scale(1.06)}
 .isn-scard-info{display:flex;flex-direction:column;flex:1;min-width:0}
 .isn-scard-info h3{max-width:125px;margin:0 0 8px;color:var(--isn-navy);font-size:20px;font-weight:700;line-height:1.25}
 .isn-scard-info p{max-width:150px;margin:0;color:#78879b;font-size:12px;line-height:1.6}
-.isn-scard-btn{display:inline-flex;align-items:center;gap:7px;width:max-content;margin-top:auto;color:var(--isn-blue);font-size:9.5px;font-weight:700;line-height:1;text-decoration:none}
+.isn-scard-btn{display:inline-flex;align-items:center;gap:7px;width:max-content;margin-top:auto;color:var(--isn-blue);font-size:12px;font-weight:700;line-height:1;text-decoration:none}
 .isn-scard-btn i{font-size:8px;transition:transform .25s ease}
 .isn-scard-btn:hover i{transform:translateX(4px)}
 .isn-scard-image{position:absolute;right:0;bottom:0;z-index:2;width:57%;height:100%;overflow:hidden;pointer-events:none}

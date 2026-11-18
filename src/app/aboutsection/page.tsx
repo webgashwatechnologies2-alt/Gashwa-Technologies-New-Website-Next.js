@@ -7,7 +7,6 @@ import './aboutsection.css';
 import about2Img from '../../../public/assets/img/about/about2.jpg';
 import aboutShape1 from '../../../public/assets/img/shape/aboutShape1_4.png';
 import gashwaSectionImg from '../../../public/assets/img/about/gashwafullsectionimage.jpg';
-import PPCAdsSection from '@/components/sections/PPCAdsSection';
 import StatsSection from '@/components/sections/StatsSection';
 import BusinessSolution from '@/components/sections/Businesssolution';
 import Testimonials from '@/components/sections/Testimonials';

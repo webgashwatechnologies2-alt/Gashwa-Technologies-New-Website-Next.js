@@ -2,20 +2,16 @@
 
 import { FormEvent, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import './Footer.css';
-
-import logoImg from '../../public/assets/img/gashwatechnologie-logonew.png';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
+  const [subscriptionNotice, setSubscriptionNotice] = useState(false);
 
   const handleSubscribe = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email.trim()) return;
-    setSubscribed(true);
-    setEmail('');
+    setSubscriptionNotice(true);
   };
 
   return (
@@ -40,7 +36,7 @@ export default function Footer() {
               +91-9805034219
             </a>
             <a
-              href="https://gashwatechnologies.com/Gashwa_Project.pdf"
+              href="/Gashwa_Project.pdf"
               target="_blank"
               rel="noreferrer"
               className="brochure-btn"
@@ -56,11 +52,10 @@ export default function Footer() {
         <div className="row gy-5">
           <div className="col-xl-3 col-lg-4 col-md-6 column-card">
             <Link href="/">
-              <Image
-                src={logoImg}
+              <img
+                src="/assets/img/gashwatechnologie-logo.png"
                 alt="Gashwa Technologies"
                 className="logo-image"
-                style={{height: '150px' , width : '50%'}}
               />
             </Link>
             <p className="about-text">
@@ -91,28 +86,27 @@ export default function Footer() {
               <li><Link href="/"><i className="fa-solid fa-chevron-right" />Home</Link></li>
               <li><Link href="/about"><i className="fa-solid fa-chevron-right" />Company Profile</Link></li>
               <li><Link href="/news"><i className="fa-solid fa-chevron-right" />News &amp; Events</Link></li>
-              <li><Link href="/projects"><i className="fa-solid fa-chevron-right" />Portfolio</Link></li>
-              <li><Link href="/contact"><i className="fa-solid fa-chevron-right" />Privacy Policy</Link></li>
-              <li><Link href="/contact"><i className="fa-solid fa-chevron-right" />Terms &amp; Conditions</Link></li>
+              <li><Link href="/portfolio"><i className="fa-solid fa-chevron-right" />Portfolio</Link></li>
+              <li><Link href="/privacy-policy"><i className="fa-solid fa-chevron-right" />Privacy Policy</Link></li>
+              <li><Link href="/terms-and-conditions"><i className="fa-solid fa-chevron-right" />Terms &amp; Conditions</Link></li>
               <li><Link href="/news"><i className="fa-solid fa-chevron-right" />Blog</Link></li>
             </ul>
           </div>
           <div className="col-xl-2 col-lg-4 col-md-6 col-sm-6 column-card">
             <h4 className="heading-title">Services</h4>
             <ul className="link-list">
-              <li><Link href="/services"><i className="fa-solid fa-chevron-right" />Website Designing</Link></li>
-              <li><Link href="/services"><i className="fa-solid fa-chevron-right" />Website Development</Link></li>
-              <li><Link href="/services"><i className="fa-solid fa-chevron-right" />CMS Development</Link></li>
-              <li><Link href="/services"><i className="fa-solid fa-chevron-right" />Mobile App Development</Link></li>
-              <li><Link href="/services"><i className="fa-solid fa-chevron-right" />Graphic Designing</Link></li>
-              <li><Link href="/services"><i className="fa-solid fa-chevron-right" />Domain &amp; Hosting</Link></li>
-              <li><Link href="/services"><i className="fa-solid fa-chevron-right" />SSL Certification</Link></li>
+              <li><Link href="/services/website-designing"><i className="fa-solid fa-chevron-right" />Website Designing</Link></li>
+              <li><Link href="/services/website-development"><i className="fa-solid fa-chevron-right" />Website Development</Link></li>
+              <li><Link href="/services/cms-development"><i className="fa-solid fa-chevron-right" />CMS Development</Link></li>
+              <li><Link href="/services/mobile-application-development"><i className="fa-solid fa-chevron-right" />Mobile App Development</Link></li>
+              <li><Link href="/services/graphic-designing"><i className="fa-solid fa-chevron-right" />Graphic Designing</Link></li>
+              <li><Link href="/services/domain-hosting"><i className="fa-solid fa-chevron-right" />Domain &amp; Hosting</Link></li>
             </ul>
           </div>
           <div className="col-xl-2 col-lg-4 col-md-6 col-sm-6 column-card">
             <h4 className="heading-title">Internet Marketing</h4>
             <ul className="link-list">
-              <li><Link href="/services"><i className="fa-solid fa-chevron-right" />Search Engine Optimization</Link></li>
+              <li><Link href="/search-engine-optimizing"><i className="fa-solid fa-chevron-right" />Search Engine Optimization</Link></li>
               <li><Link href="/services"><i className="fa-solid fa-chevron-right" />Search Engine Marketing</Link></li>
               <li><Link href="/services"><i className="fa-solid fa-chevron-right" />Social Media Marketing</Link></li>
               <li><Link href="/services"><i className="fa-solid fa-chevron-right" />Content Marketing</Link></li>
@@ -125,7 +119,7 @@ export default function Footer() {
             <h4 className="heading-title">Contact Details</h4>
             <div className="contact-item">
               <div className="contact-icon">
-                <i className="fa-solid fa-location-dot" />
+                <i style={{ color: 'white' }} className="fa-solid fa-location-dot" />
               </div>
               <div className="contact-text">
                 <div className="contact-label">Head Office</div>
@@ -137,7 +131,7 @@ export default function Footer() {
             </div>
             <div className="contact-item">
               <div className="contact-icon">
-                <i className="fa-solid fa-envelope" />
+                <i style={{ color: 'white' }} className="fa-solid fa-envelope" />
               </div>
               <div className="contact-text">
                 <div className="contact-label">Email Us</div>
@@ -148,7 +142,7 @@ export default function Footer() {
             </div>
             <div className="contact-item">
               <div className="contact-icon">
-                <i className="fa-solid fa-phone" />
+                <i style={{ color: 'white' }} className="fa-solid fa-phone" />
               </div>
               <div className="contact-text">
                 <div className="contact-label">Sales</div>
@@ -161,7 +155,7 @@ export default function Footer() {
             </div>
             <div className="contact-item">
               <div className="contact-icon">
-                <i className="fa-solid fa-headset" />
+                <i style={{ color: 'white' }} className="fa-solid fa-headset" />
               </div>
               <div className="contact-text">
                 <div className="contact-label">Operations</div>
@@ -194,13 +188,17 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   aria-label="Email address"
+                  required
                 />
                 <button type="submit" className="newsletter-button">
-                  {subscribed ? 'Subscribed' : 'Subscribe'}
+                  Subscribe
                 </button>
               </div>
-              {subscribed && (
-                <p className="newsletter-success">Thanks! You're on the list.</p>
+              {subscriptionNotice && (
+                <p className="newsletter-note" role="status">
+                  Online newsletter signup is not available yet. Please email{' '}
+                  <a href="mailto:info@gashwatechnologies.com">info@gashwatechnologies.com</a>.
+                </p>
               )}
             </form>
           </div>
@@ -215,9 +213,9 @@ export default function Footer() {
               {' '}— All Rights Reserved.
             </p>
             <div className="legal-links">
-              <Link href="/contact">Terms &amp; Conditions</Link>
+              <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>
               <span className="legal-dot" />
-              <Link href="/contact">Privacy Policy</Link>
+              <Link href="/privacy-policy">Privacy Policy</Link>
             </div>
           </div>
         </div>

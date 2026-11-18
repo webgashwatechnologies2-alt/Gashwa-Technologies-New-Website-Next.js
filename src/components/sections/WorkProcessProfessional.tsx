@@ -15,7 +15,7 @@ const WORK_STEPS = [
     title: 'UI/UX Design',
     desc: 'Create elegant user experiences with thoughtful layouts, visual hierarchy, and brand consistency.',
     icon: 'fa-solid fa-pen-ruler',
-    accent: '#265B99',
+    accent: '#0D4892',
     bg: '#ECF3FF',
   },
   {

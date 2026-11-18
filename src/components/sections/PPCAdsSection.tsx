@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useCallback, useEffect } from 'react';
+import Link from 'next/link';
 import './PPCAdsSection.css';
 
 // Types
@@ -23,7 +24,7 @@ const PPC_ADS_ITEMS: PPCAdsItem[] = [
     title: 'Software Masters',
     description: 'Enterprise-grade software development, integration, and support for scalable products.',
     icon: 'fas fa-cogs',
-    color: '#32649F',
+    color: '#0D4892',
   },
   {
     title: 'Execution Business',
@@ -129,10 +130,10 @@ export default function PPCAdsSection() {
               <h3 className="ppc-ads-card-title">{item.title}</h3>
               <p className="ppc-ads-card-description">{item.description}</p>
 
-              <a href="/services" className="ppc-ads-card-link">
+              <Link href="/services" className="ppc-ads-card-link">
                 <span>Read More</span>
                 <span className="ppc-ads-card-link-arrow">→</span>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

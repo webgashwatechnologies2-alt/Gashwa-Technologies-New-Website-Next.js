@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
 
 .about-section {
   --paper: #f5f6f4;
   --ink: #12181f;
   --ink-soft: #56636e;
   --navy: #16222b;
-  --brass: #32649F;
-  --brass-soft: #32649F;
+  --brass: #0D4892;
+  --brass-soft: #0D4892;
   --line: #dde1e0;
 
   background: var(--paper);
@@ -190,7 +190,7 @@
 }
 
 .paragraph {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: var(--ink-soft);
@@ -249,7 +249,7 @@
 }
 
 .highlight-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: var(--ink-soft);
@@ -261,7 +261,7 @@
 .stat-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: #32649F;
+  background: #0D4892;
   margin: 0;
 }
 
@@ -283,7 +283,7 @@
 }
 
 .stat-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 12px;
   color: whitesmoke;
   margin: 0;

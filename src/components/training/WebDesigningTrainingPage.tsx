@@ -147,50 +147,6 @@ const COURSE_DURATIONS = [
   },
 ];
 
-// Why choose us (8 reasons)
-const WHY_CHOOSE_ITEMS = [
-  {
-    icon: 'fa-arrow-trend-up',
-    title: 'Growing Industry',
-    desc: 'You will become a part of a growing industry after completing your training. Join Now.',
-  },
-  {
-    icon: 'fa-fire-flame-curved',
-    title: 'Highly Demanded',
-    desc: 'You will become a part of a high demanded industry after completing your training.',
-  },
-  {
-    icon: 'fa-chalkboard-user',
-    title: 'Projector Based Class',
-    desc: 'We will also prepare you for interview after completing your Web Designing Course in smart projector labs.',
-  },
-  {
-    icon: 'fa-user-tie',
-    title: 'Professional Trainers',
-    desc: 'Learn from seasoned trainers with over 14 years of extensive experience in the field.',
-  },
-  {
-    icon: 'fa-gift',
-    title: '2 Days Free Demo Class',
-    desc: 'Before enrolling in our course, enjoy a complimentary 2-day demo class to experience the learning firsthand.',
-  },
-  {
-    icon: 'fa-bolt',
-    title: 'Excited Industry',
-    desc: 'You will become a part of an excited industry after completing your training. Join Now.',
-  },
-  {
-    icon: 'fa-laptop-code',
-    title: 'Freelancing',
-    desc: 'After completing the training, you can do freelancing and make money from home.',
-  },
-  {
-    icon: 'fa-rocket',
-    title: 'Start Your Own Business',
-    desc: 'You will be able to start your own web design business or digital agency after training.',
-  },
-];
-
 // 4 Hiring steps
 const HIRING_STEPS = [
   {
@@ -304,7 +260,7 @@ export default function WebDesigningTrainingPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalTitle, setModalTitle] = useState('Book Your Seat');
-  const [submitted, setSubmitted] = useState(false);
+  const [submissionNotice, setSubmissionNotice] = useState(false);
 
   // Form state
   const [form, setForm] = useState({
@@ -321,13 +277,13 @@ export default function WebDesigningTrainingPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmissionNotice(true);
   };
 
   const openBookingModal = (title: string) => {
     setModalTitle(title);
     setIsModalOpen(true);
-    setSubmitted(false);
+    setSubmissionNotice(false);
   };
 
   const scrollToForm = () => {
@@ -467,7 +423,7 @@ export default function WebDesigningTrainingPage() {
                   href="https://gashwatechnologies.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#2B5F9B', fontWeight: 750, textDecoration: 'underline' }}
+                  style={{ color: '#0D4892', fontWeight: 750, textDecoration: 'underline' }}
                 >
                   Gashwa Institute of Technical Education
                 </a>{' '}
@@ -513,7 +469,7 @@ export default function WebDesigningTrainingPage() {
                 </button>
                 <a
                   href="tel:+919805034219"
-                  style={{ color: '#2B5F9B', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
+                  style={{ color: '#0D4892', fontWeight: 700, textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
                 >
                   <i className="fa-solid fa-phone" />
                   <span>+91 9805034219</span>
@@ -527,16 +483,14 @@ export default function WebDesigningTrainingPage() {
                   <p>Send your query or apply for 2-day free demo class</p>
                 </div>
 
-                {submitted ? (
-                  <div className="g-form-success">
-                    <i className="fa-solid fa-circle-check" style={{ fontSize: '2.4rem', color: '#10b981', marginBottom: '10px', display: 'block' }} />
-                    <h4 style={{ margin: '0 0 6px', color: '#0f172a' }}>Thank You! Inquiry Submitted.</h4>
-                    <p style={{ margin: 0, fontSize: '0.9rem' }}>
-                      Our course mentor will contact you shortly at <strong>+91 9805034219</strong>.
-                    </p>
+                {submissionNotice && (
+                  <div className="alert alert-warning" role="status">
+                    Online registration is not available yet. Please call{' '}
+                    <a href="tel:+919805034219">+91 98050 34219</a> or email{' '}
+                    <a href="mailto:info@gashwatechnologies.com">info@gashwatechnologies.com</a>.
                   </div>
-                ) : (
-                  <form onSubmit={handleSubmit}>
+                )}
+                <form onSubmit={handleSubmit}>
                     <div className="g-form-group">
                       <label className="g-form-label">Name *</label>
                       <input
@@ -608,8 +562,7 @@ export default function WebDesigningTrainingPage() {
                       <span>Submit</span>
                       <i className="fa-solid fa-paper-plane" />
                     </button>
-                  </form>
-                )}
+                </form>
               </div>
               <div className="g-help-card">
                 <h3 className="g-help-card__title">Need Any Help?</h3>
@@ -773,7 +726,7 @@ export default function WebDesigningTrainingPage() {
             <h2 className="g-section-title">Web Designing Course Programs</h2>
             <p className="g-section-desc">
               Apply now and turn your passion for Web Designing into a rewarding career! Contact us at{' '}
-              <a href="tel:+919805034219" style={{ color: '#2B5F9B', fontWeight: 750 }}>
+              <a href="tel:+919805034219" style={{ color: '#0D4892', fontWeight: 750 }}>
                 +91 9805034219
               </a>
             </p>
@@ -1168,7 +1121,7 @@ export default function WebDesigningTrainingPage() {
                 Naukri, Indeed, Monsterindia, Shine, Timesjobs, Amazon Jobs, LinkedIn and Angel List Reveal That There Are Over{' '}
                 <strong>35,00,000 Open IT Jobs Available In 2023 Only In India</strong>.
               </p>
-              <p style={{ fontWeight: 750, color: '#2B5F9B', margin: '0 0 16px' }}>
+              <p style={{ fontWeight: 750, color: '#0D4892', margin: '0 0 16px' }}>
                 Registration Open for B.Tech Diploma, M.Tech, M.sc, BCA, MCA
               </p>
               <div className="g-market-badge-wrap">
@@ -1409,24 +1362,14 @@ export default function WebDesigningTrainingPage() {
             <p style={{ margin: '0 0 20px', fontSize: '0.9rem', color: '#64748b' }}>
               Fill in your details below and our admissions team will contact you.
             </p>
-            {submitted ? (
-              <div className="g-form-success">
-                <i className="fa-solid fa-circle-check" style={{ fontSize: '2.2rem', color: '#10b981', marginBottom: '8px', display: 'block' }} />
-                <strong>Request Submitted Successfully!</strong>
-                <p style={{ margin: '6px 0 0', fontSize: '0.85rem' }}>
-                  We will reach out to you within 2 working hours.
-                </p>
-                <button
-                  type="button"
-                  className="g-btn g-btn--primary"
-                  style={{ marginTop: '14px', width: '100%' }}
-                  onClick={() => setIsModalOpen(false)}
-                >
-                  Close
-                </button>
+            {submissionNotice && (
+              <div className="alert alert-warning" role="status">
+                Online registration is not available yet. Please call{' '}
+                <a href="tel:+919805034219">+91 98050 34219</a> or email{' '}
+                <a href="mailto:info@gashwatechnologies.com">info@gashwatechnologies.com</a>.
               </div>
-            ) : (
-              <form onSubmit={handleSubmit}>
+            )}
+            <form onSubmit={handleSubmit}>
                 <div className="g-form-group">
                   <label className="g-form-label">Name *</label>
                   <input
@@ -1485,8 +1428,7 @@ export default function WebDesigningTrainingPage() {
                   <span>Submit Application</span>
                   <i className="fa-solid fa-arrow-right" />
                 </button>
-              </form>
-            )}
+            </form>
           </div>
         </div>
       )}

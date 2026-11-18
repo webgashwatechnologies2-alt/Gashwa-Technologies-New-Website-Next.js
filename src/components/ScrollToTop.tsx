@@ -38,7 +38,7 @@ export default function ScrollToTop() {
         width: '45px',
         height: '45px',
         borderRadius: '50%',
-        backgroundColor: '#265B99',
+        backgroundColor: '#0D4892',
         color: '#fff',
         border: 'none',
         boxShadow: '0 4px 10px rgba(0,0,0,0.2)',

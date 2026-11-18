@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "./testimonials.css";
+import "./Testimonials.css";
 
 type Testimonial = {
   name: string;
@@ -77,7 +77,7 @@ export default function Testimonials() {
           </span>
           <h2 style={{fontFamily : '"Plus Jakarta Sans", "Plus Jakarta Sans Fallback"'}} className="tst-title">What happy clients says about us?</h2>
           <div className="tst-main-img">
-            <img src="/assets/img/testimonial/testimonial-left-img.png" alt="Happy client" />
+            <img src="/assets/img/about/aboutnew.jpg" alt="Happy client" />
           </div>
         </div>
         <div className="tst-right">

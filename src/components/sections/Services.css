@@ -43,7 +43,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #2B5F9B;
+  color: #0D4892;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -52,7 +52,7 @@
 }
 
 .services-kicker .kicker-arrow {
-  color: #2B5F9B;
+  color: #0D4892;
   font-weight: 800;
   font-size: 1rem;
 }
@@ -74,7 +74,7 @@
 }
 
 .services-main-title .highlight {
-  color: #2B5F9B;
+  color: #0D4892;
 }
 
 /* Header Paragraph */
@@ -154,7 +154,7 @@
 .service-card-icon {
   width: 26px;
   height: 26px;
-  color: #2B5F9B;
+  color: #0D4892;
   stroke-width: 2.2px;
   transition: transform 0.35s ease, color 0.35s ease;
 }
@@ -188,7 +188,7 @@
   gap: 8px;
   padding: 9px 20px;
   border-radius: 9999px;
-  background: #32649F;
+  background: #0D4892;
   border: 1px solid #e2e8f0;
   color: #ffffff;
   font-size: 0.85rem;
@@ -200,9 +200,9 @@
 
 .service-card-modern:hover .service-read-more-btn,
 .service-read-more-btn:hover {
-  background: linear-gradient(135deg, #2B5F9B 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #0D4892 0%, #1d4ed8 100%);
   color: #ffffff;
-  border-color: #2B5F9B;
+  border-color: #0D4892;
   box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
@@ -219,7 +219,7 @@
 
 /* Featured Live Chat / Support Card (4th Item) */
 .service-card-featured {
-  background: linear-gradient(135deg, #2B5F9B 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #0D4892 0%, #1d4ed8 100%);
   border-radius: 20px;
   padding: 26px 24px;
   position: relative;
@@ -349,7 +349,7 @@
   gap: 8px;
   padding: 12px 20px;
   background: #ffffff;
-  color: #2B5F9B;
+  color: #0D4892;
   font-weight: 700;
   font-size: 0.875rem;
   border-radius: 9999px;

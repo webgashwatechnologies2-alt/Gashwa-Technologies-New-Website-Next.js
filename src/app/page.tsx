@@ -1,6 +1,5 @@
 import {
   Hero,
-  ServiceMarquee,
   Services,
   About,
   WorkProcess,
@@ -8,16 +7,12 @@ import {
   PPCAdsSection,
   BusinessSolution,
   InternshipTraining,
-  IndustriesWeServe,
   FAQ,
   Testimonials,
-  Newsletter,
-  WorkProcessProfessional,
   CallBannerSection,
 } from '@/components/sections';
 import Aboutneeewsection from '@/components/sections/Aboutneeewsection';
 import StatsSection from '@/components/sections/StatsSection';
-import WorkingProcess from '@/components/sections/WorkingProcess';
 
 export const metadata = {
   title: 'Gashwa Technologies Pvt. Ltd. | IT Company in Shimla Himachal',

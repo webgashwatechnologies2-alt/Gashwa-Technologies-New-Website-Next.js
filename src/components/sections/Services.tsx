@@ -14,10 +14,8 @@ import {
   Smartphone,
   Layers,
   Headphones,
-  ChevronRight,
   Navigation,
   MessageSquareText,
-  Sparkles,
   ArrowUpRight
 } from 'lucide-react';
 import './Services.css';

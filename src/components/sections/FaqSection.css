@@ -1,6 +1,6 @@
 /* ==========================================================================
    FAQ Section — Modern 2-Column Split Design
-   Theme Accent: #2B5F9B
+   Theme Accent: #0D4892
    Matches Image 2 Layout: Left CTA Consultant Card + Right Minimalist Accordion
    ========================================================================== */
 
@@ -86,7 +86,7 @@
 .faq2-eyebrow-dot {
   width: 8.5px;
   height: 8.5px;
-  background-color: #2B5F9B;
+  background-color: #0D4892;
   border-radius: 50%;
   display: inline-block;
   box-shadow: 0 0 0 3px rgba(43, 95, 155, 0.18);
@@ -151,7 +151,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #2B5F9B 0%, rgba(43, 95, 155, 0.3) 100%);
+  background: linear-gradient(90deg, #0D4892 0%, rgba(43, 95, 155, 0.3) 100%);
   opacity: 0.9;
 }
 
@@ -202,13 +202,13 @@
   margin: 0 0 24px;
 }
 
-/* Primary CTA Button (#2B5F9B) */
+/* Primary CTA Button (#0D4892) */
 .faq2-call-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: #2B5F9B;
+  background: #0D4892;
   color: #ffffff !important;
   font-size: 15px;
   font-weight: 600;

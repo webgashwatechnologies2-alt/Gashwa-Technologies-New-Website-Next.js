@@ -11,15 +11,15 @@ Version: 1.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #265B99;
+  --theme: #0D4892;
   --theme2: #18185E;
-  --theme-color3: #265B99;
+  --theme-color3: #0D4892;
   --header: #0F0D1D;
   --text: #585858;
   --text-2: #ffffffcc;
   --border: #E3E3E3;
   --border2: #242449;
-  --border3: #265B99;
+  --border3: #0D4892;
   --bg: #F3F7FB;
   --bg2: #18185E;
   --bg3: #ffffff33;
@@ -12360,7 +12360,7 @@ input.main-search-input::placeholder {
   background-color: var(--white);
 }
 .service-box-items.style-3::before {
-  background: linear-gradient(180deg, #265B99 -23.85%, #6324B3 100%);
+  background: linear-gradient(180deg, #0D4892 -23.85%, #6324B3 100%);
   border-radius: 10px;
 }
 .service-box-items.style-3::after {

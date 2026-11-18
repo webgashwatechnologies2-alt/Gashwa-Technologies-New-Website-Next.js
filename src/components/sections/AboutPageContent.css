@@ -3,11 +3,11 @@
    Gashwa Technologies
    ════════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* ─── Design tokens ─────────────────────────────────────────── */
 :root {
-  --apc-blue:       #32649F;
+  --apc-blue:       #0D4892;
   --apc-blue-dark:  #1e4580;
   --apc-blue-light: #5b8fd4;
   --apc-navy:       #0d1b35;
@@ -18,7 +18,7 @@
   --apc-border:     #e2e8f0;
   --apc-radius:     16px;
   --apc-font-head:  'Plus Jakarta Sans', sans-serif;
-  --apc-font-body:  'Inter', sans-serif;
+  --apc-font-body:  'Plus Jakarta Sans', sans-serif;
 }
 
 /* ─── Shared Utilities ──────────────────────────────────────── */

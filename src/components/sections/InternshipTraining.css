@@ -60,7 +60,7 @@
   border: 1px solid rgba(50, 100, 159, 0.22);
   padding: 7px 18px;
   border-radius: 999px;
-  color: #32649f;
+  color: #0D4892;
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -70,7 +70,7 @@
 .it-eyebrow-icon {
   width: 13px;
   height: 13px;
-  color: #32649f;
+  color: #0D4892;
 }
 
 .it-section-title {
@@ -82,7 +82,7 @@
   margin-bottom: 16px;
 }
 .it-title-accent {
-  background: linear-gradient(130deg, #32649f 0%, #32649f  100%);
+  background: linear-gradient(130deg, #0D4892 0%, #0D4892  100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -103,7 +103,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  background: #265B99;
+  background: #0D4892;
   border-radius: 18px;
   border: 1px solid rgba(203, 213, 225, 0.7);
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
@@ -225,7 +225,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  background: linear-gradient(135deg, #32649f, #1d4ed8);
+  background: linear-gradient(135deg, #0D4892, #1d4ed8);
   color: #ffffff;
   padding: 8px 14px;
   border-radius: 999px;
@@ -282,7 +282,7 @@
   object-fit: cover;
 }
 .it-avatar-num {
-  background: #32649f;
+  background: #0D4892;
   display: grid;
   place-items: center;
   font-size: 0.6rem;
@@ -361,7 +361,7 @@
   height: 48px;
   border-radius: 14px;
   background: linear-gradient(135deg, rgba(50, 100, 159, 0.12) 0%, rgba(29, 78, 216, 0.18) 100%);
-  color: #32649f;
+  color: #0D4892;
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -381,7 +381,7 @@
   margin-bottom: 6px;
 }
 .it-heading-accent {
-  color: #32649f;
+  color: #0D4892;
 }
 .it-content-subtext {
   font-size: 0.88rem;
@@ -402,7 +402,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #32649f 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #0D4892 0%, #1d4ed8 100%);
   color: #ffffff !important;
   padding: 11px 26px;
   border-radius: 999px;
@@ -452,9 +452,9 @@
   padding: 0;
 }
 .it-nav-btn:hover {
-  background: #32649f;
+  background: #0D4892;
   color: #ffffff;
-  border-color: #32649f;
+  border-color: #0D4892;
   box-shadow: 0 4px 12px rgba(50, 100, 159, 0.32);
 }
 
@@ -516,14 +516,14 @@
   flex-shrink: 0;
   transition: all 0.28s ease;
 }
-.it-icon-blue  { background: rgba(50, 100, 159, 0.10); color: #32649f; }
+.it-icon-blue  { background: rgba(50, 100, 159, 0.10); color: #0D4892; }
 .it-icon-green { background: rgba(34, 197, 94, 0.10);  color: #16a34a; }
 .it-icon-amber { background: rgba(245, 158, 11, 0.10); color: #d97706; }
 
 .it-course-card:hover .it-course-icon-wrap {
   transform: scale(1.08);
 }
-.it-course-card:hover .it-icon-blue  { background: #32649f; color: #fff; }
+.it-course-card:hover .it-icon-blue  { background: #0D4892; color: #fff; }
 .it-course-card:hover .it-icon-green { background: #16a34a; color: #fff; }
 .it-course-card:hover .it-icon-amber { background: #d97706; color: #fff; }
 
@@ -543,7 +543,7 @@
   white-space: nowrap;
   height: fit-content;
 }
-.it-badge-blue  { background: rgba(50, 100, 159, 0.09); color: #32649f; }
+.it-badge-blue  { background: rgba(50, 100, 159, 0.09); color: #0D4892; }
 .it-badge-green { background: rgba(34, 197, 94, 0.10);  color: #16a34a; }
 .it-badge-amber { background: rgba(245, 158, 11, 0.10); color: #d97706; }
 
@@ -568,7 +568,7 @@
   gap: 4px;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #32649f;
+  color: #0D4892;
   text-decoration: none;
   transition: gap 0.22s ease, color 0.22s ease;
   margin-top: auto;
@@ -595,7 +595,7 @@
 }
 .it-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #32649f, #1d4ed8);
+  background: linear-gradient(90deg, #0D4892, #1d4ed8);
   border-radius: 999px;
   transition: width 0.5s ease;
 }
@@ -617,7 +617,7 @@
 .it-dot-active {
   width: 20px;
   border-radius: 999px;
-  background: #32649f;
+  background: #0D4892;
 }
 
 /* ── Trust Bar ────────────────────────────────────────────────────────────── */
@@ -626,7 +626,7 @@
   align-items: center;
   justify-content: center;
   gap: 0;
-  background: #32649f;
+  background: #0D4892;
   border: 1px solid rgba(203, 213, 225, 0.6);
   border-radius: 14px;
   padding: 14px 20px;
@@ -648,7 +648,7 @@
 .it-trust-icon {
   width: 15px;
   height: 15px;
-  color: #32649f;
+  color: #0D4892;
   flex-shrink: 0;
 }
 .it-trust-divider {

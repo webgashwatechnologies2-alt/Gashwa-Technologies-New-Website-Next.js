@@ -54,8 +54,8 @@ export default function FAQ() {
     }}>
       {/* Decorative top-left dots matching reference image */}
       <div style={{ position: 'absolute', top: '20px', left: '20px', display: 'flex', gap: '8px', zIndex: 1 }}>
-        <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#265B99', opacity: 0.8 }} />
-        <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#265b99', opacity: 0.6 }} />
+        <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#0D4892', opacity: 0.8 }} />
+        <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#0D4892', opacity: 0.6 }} />
       </div>
 
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
@@ -65,9 +65,9 @@ export default function FAQ() {
             <div className="faq-content-left" style={{ paddingRight: '15px' }}>
               {/* Subtitle */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                <span style={{ width: '20px', height: '2px', backgroundColor: '#265B99', display: 'inline-block' }} />
+                <span style={{ width: '20px', height: '2px', backgroundColor: '#0D4892', display: 'inline-block' }} />
                 <span style={{
-                  color: '#265B99',
+                  color: '#0D4892',
                   fontWeight: '700',
                   fontSize: '0.85rem',
                   letterSpacing: '1.5px',
@@ -109,7 +109,7 @@ export default function FAQ() {
                       <span style={{
                         width: '4px',
                         height: isOpen ? '42px' : '22px',
-                        backgroundColor: '#265B99',
+                        backgroundColor: '#0D4892',
                         borderRadius: '4px',
                         marginRight: '12px',
                         marginTop: isOpen ? '10px' : '0',
@@ -135,7 +135,7 @@ export default function FAQ() {
                               style={{
                                 width: '100%',
                                 padding: '14px 20px',
-                                backgroundColor: '#265B99',
+                                backgroundColor: '#0D4892',
                                 border: 'none',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -154,7 +154,7 @@ export default function FAQ() {
                                   display: 'flex',
                                   alignItems: 'center',
                                   justifyContent: 'center',
-                                  color: '#265B99',
+                                  color: '#0D4892',
                                   flexShrink: 0
                                 }}>
                                   <Check size={14} strokeWidth={3} />
@@ -223,7 +223,7 @@ export default function FAQ() {
                                 width: '22px',
                                 height: '22px',
                                 borderRadius: '50%',
-                                backgroundColor: '#265B99',
+                                backgroundColor: '#0D4892',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',

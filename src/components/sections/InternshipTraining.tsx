@@ -22,6 +22,7 @@ import {
   Star,
   CheckCircle2,
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 import './InternshipTraining.css';
 import about2Img from '../../../public/assets/img/choose/trainingimage.webp';
@@ -49,7 +50,7 @@ interface CardItem {
   id: number;
   title: string;
   description: string;
-  icon: any;
+  icon: LucideIcon;
   badge: string;
   badgeColor: string;
   link: string;
